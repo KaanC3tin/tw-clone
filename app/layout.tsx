@@ -6,7 +6,7 @@ import SigninModal from "@/components/SignUpModal";
 import LoginModal from "@/components/LoginModal";
 import CustomIcon from "@/components/CustomIcon";
 import GoogleAuth from "@/components/GoogleAuth";
-import AppleAuth from "@/components/AppleAuth";
+// import AppleAuth from "@/components/AppleAuth";
 import Loading from "@/components/Loading"
 
 const inter = Inter({ subsets: ["latin"] });
@@ -80,7 +80,7 @@ export default function RootLayout({
           <div className="w-1/2 grid place-items-center h-screen">
             <CustomIcon />
           </div>
-          
+
           <div className="text-white w-1/5">
             <div className="text-7xl mt-44 ">Şu anda olup bitenler</div>
             <div className="text-3xl mt-11 font-bold">Hemen katıl.</div>
@@ -112,93 +112,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-
-// "use client";
-// import { useEffect, useState } from "react";
-// import { Inter } from "next/font/google";
-// import "./globals.css";
-// import SigninModal from "@/components/SigninModal";
-// import LoginModal from "@/components/LoginModal";
-// import Head from "next/head";
-// import CustomIcon from "@/components/CustomIcon";
-// import GoogleAuth from "@/components/GoogleAuth";
-// import AppleAuth from '@/components/AppleAuth';
-// import Loading from "@/components/Loading"; // Loading bileşenini import edin
-
-// const inter = Inter({ subsets: ["latin"] });
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   const [loading, setLoading] = useState(true);
-//   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-//   const [isSigninModalOpen, setIsSigninModalOpen] = useState(false);
-
-//   const handleShowLoginModal = () => setIsLoginModalOpen(true);
-//   const handleShowSigninModal = () => setIsSigninModalOpen(true);
-//   const handleCloseModal = () => {
-//     setIsLoginModalOpen(false);
-//     setIsSigninModalOpen(false);
-//   };
-
-//   useEffect(() => {
-//     const timer = setTimeout(() => setLoading(false), 1400); // 1.4 saniye
-//     return () => clearTimeout(timer);
-//   }, []);
-
-//   return (
-//     <html lang="en">
-//       <Head>
-//         <title>Uygulama Başlığı</title>
-//       </Head>
-//       <body className={inter.className + " bg-black"}>
-//         {/* Loading bileşenini göstermek için koşul ekleyin */}
-//         {loading && (
-//           <div className="fixed inset-0 flex justify-center items-center bg-black z-50">
-//             <Loading />
-//           </div>
-//         )}
-
-//         {/* Modallar */}
-//         <SigninModal isOpen={isSigninModalOpen} onClose={handleCloseModal} />
-//         <LoginModal isOpen={isLoginModalOpen} onClose={handleCloseModal} />
-
-//         {/* Sayfa İçeriği */}
-//         <div className="flex font-twitterChirpExtendedHeavy">
-//           <div className="w-1/2 grid place-items-center h-screen">
-//             <CustomIcon />
-//           </div>
-//           <div className="text-white w-1/4">
-//             <div className="text-6xl mt-20 px-5">Şu anda olup bitenler</div>
-//             <div className="text-xl mt-11 font-bold px-5">Hemen katıl.</div>
-//             <GoogleAuth />
-//             <AppleAuth />
-//             <div className="flex items-center justify-center mt-3 my-2.5 px-9">
-//               <div className="flex-grow border-t border-gray-400"></div>
-//               <span className="mx-2 text-white">veya</span>
-//               <div className="flex-grow border-t border-gray-400"></div>
-//             </div>
-//             <button
-//               onClick={handleShowSigninModal}
-//               className="bg-twitterBlue w-full h-12 text-center text-white items-center justify-center flex rounded-3xl pb-6 hover:bg-opacity-80 duration-500 ml-3 xl:ml-3 2xl:ml-3 md:ml-3"
-//             >
-//               <div className="my-auto mx-auto">Hesap Oluştur</div>
-//             </button>
-//             <div className="mt-8 mb-5 px-7">Zaten Hesabın Var mı?</div>
-//             <button
-//               onClick={handleShowLoginModal}
-//               className="bg-black w-full h-12 text-center border border-gray-400 text-twitterBlue items-center justify-center flex rounded-3xl pb-6 duration-500 ml-3 xl:ml-3 2xl:ml-3 md:ml-3"
-//             >
-//               <div className="my-auto">Giriş yap</div>
-//             </button>
-//           </div>
-//         </div>
-
-//         {children}
-//       </body>
-//     </html>
-//   );
-// }
