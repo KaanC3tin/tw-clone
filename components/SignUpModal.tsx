@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Icon } from "@iconify-icon/react";
 import { auth } from "@/lib/firebaseConfig";
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, signOut } from 'firebase/auth';
 import Loading from './Loading';
+import { useRouter } from 'next/navigation';
 
 
 interface SigninModalProps {
@@ -25,6 +26,8 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
     const [showHistory, setShowHistory] = useState<boolean>(true);
     const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);
     const [isFormValid, setIsFormValid] = useState<boolean>(false)
+
+    const router = useRouter();
 
 
     const currentYear = new Date().getFullYear();
@@ -76,6 +79,7 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
             }, 1500);
         } catch (error) {
             console.log("Kaydı tamamlamak için şifre oluşturun!", error);
+            router.push("/home")
             setLoading(false);
             // Başarısızlık durumunda sadece şifre alanını göster
             setShowIsim(false);
@@ -84,6 +88,8 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
             setShowPassword(true);
         }
     }
+
+     
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
@@ -206,8 +212,8 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
                                     </div>
                                 )}
                                 <button
-                                //    onClick={}
-                                            type="submit"
+                                    //    onClick={}
+                                    type="submit"
                                     disabled={!isFormValid}
                                     className={`w-full py-2 rounded-3xl flex justify-center items-center text-center transition duration-1000 ${isFormValid ? 'bg-white text-black' : 'bg-gray-400 text-gray-600 opacity-50 cursor-not-allowed'
                                         }`}

@@ -1,9 +1,12 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth'
 import React from 'react'
+import { useRouter } from 'next/navigation';
 
 
 
 const GoogleAuth = () => {
+
+    const router = useRouter();
 
     const handleSignIn = async () => {
         const provider = new GoogleAuthProvider();
@@ -13,11 +16,14 @@ const GoogleAuth = () => {
         try {
             const result = await signInWithPopup(auth, provider)
             console.log("Başarılı!:", result)
+            router.push("/home")
+
         } catch (error) {
             console.log("Başarısız!:", error)
         }
-    }
 
+    }
+ 
 
     return (
         <div className='mt-11  flex items-center justify-center my-auto '>
