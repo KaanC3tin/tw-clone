@@ -124,7 +124,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ onClose }) => {
                                 className="w-64 bg-black text-white rounded-md p-2 focus:outline-none focus:ring-1 focus:border-blue-500 transition ease-in-out duration-150"
                             />
                             <button
-                                type="submit"
+                            //   onClick={}
+                                    type="submit"
                                 disabled={!isEmailValid}
                                 className={`w-full bg-white text-gray-400 py-2 rounded-3xl flex justify-center items-center text-center transition duration-1000 mt-5 ${!isEmailValid ? 'opacity-50 cursor-not-allowed' : ''
                                     }`}

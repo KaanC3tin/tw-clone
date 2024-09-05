@@ -206,7 +206,8 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
                                     </div>
                                 )}
                                 <button
-                                    type="submit"
+                                //    onClick={}
+                                            type="submit"
                                     disabled={!isFormValid}
                                     className={`w-full py-2 rounded-3xl flex justify-center items-center text-center transition duration-1000 ${isFormValid ? 'bg-white text-black' : 'bg-gray-400 text-gray-600 opacity-50 cursor-not-allowed'
                                         }`}
