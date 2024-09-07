@@ -31,6 +31,7 @@ const AppheAuth = () => {
                 <span>Apple ile giriş yap</span>
             </div>
         </div>
+
     )
 }
 

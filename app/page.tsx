@@ -1,8 +1,3 @@
-//       <Head>
-//         <link rel="icon" href="/favicon.ico" />
-//       </Head>
-
-// export default home
 
 "use client";
 import { useState, useEffect } from "react";
@@ -80,8 +75,8 @@ export default function Home() {
         </div>
 
         <div className="text-white w-1/5">
-          <div className="text-7xl mt-32">Şu anda olup bitenler</div>
-          <div className="text-3xl mt-11 font-bold">Hemen katıl.</div>
+          <div className="text-7xl lg:text-6xl md:text-5xl sm:text-4xl mt-32">Şu anda olup bitenler</div>
+          <div className="text-3xl mt-11 font-bold lg:font-semibold md:font-normal">Hemen katıl.</div>
           <GoogleAuth />
           <AppleAuth />
           <div className="flex items-center justify-center mt-3 my-2.5 px-5">

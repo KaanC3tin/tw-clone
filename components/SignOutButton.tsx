@@ -34,12 +34,13 @@ const SignOutButton: React.FC = () => {
   }
 
   return (
-    <div>
-      <button onClick={handleSignOut} className='button w-full rounded-3xl border-3 border-twitterGray'>
+    <div className=''>
+      <button onClick={handleSignOut}
+        className='justify-start button  rounded-3xl border-3 text-sm font-semibold border-twitterGray'>
         Çıkış Yap
       </button>
       {signOutMessage && (
-        <div className='  justify-center items-center text-center text-white border-2 border-twitterGray rounded-3xl'>
+        <div className='  mt-2 w-32 h-12 flex justify-center items-center text-center text-white border-2 border-twitterGray rounded-3xl'>
           {signOutMessage}
         </div>
       )}
