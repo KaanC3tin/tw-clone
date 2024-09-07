@@ -1,6 +1,9 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth'
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { getAuth } from 'firebase/auth';
 import React from 'react'
 import { useRouter } from 'next/navigation';
+import Cookies from 'js-cookie'; // Cookie yönetimi için
+
 
 
 
@@ -11,19 +14,27 @@ const GoogleAuth = () => {
     const handleSignIn = async () => {
         const provider = new GoogleAuthProvider();
         const auth = getAuth();
-        auth.languageCode = "tr";
+        // auth.languageCode = "tr";
 
         try {
             const result = await signInWithPopup(auth, provider)
+            const user = result.user;
+            const token = await user.getIdToken();//userın tokenını alıyoruz
+
+
+
+            Cookies.set("token", token, { expires: 4 })
             console.log("Başarılı!:", result)
             router.push("/home")
+
+
 
         } catch (error) {
             console.log("Başarısız!:", error)
         }
 
     }
- 
+
 
     return (
         <div className='mt-11  flex items-center justify-center my-auto '>

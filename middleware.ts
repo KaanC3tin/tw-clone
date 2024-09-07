@@ -2,7 +2,6 @@
 import { NextRequest, NextResponse } from "next/server"
 
 export function middleware(request: NextRequest) {
-    const { pathname } = request.nextUrl;
 
     // kullanıcını giriş yapıp yapmadığını kontrol et
     const token = request.cookies.get('token');
@@ -10,8 +9,8 @@ export function middleware(request: NextRequest) {
 
 
     // Eğer kullanıcı giriş yapmamışsa ve token yoksa "/" sayfasına yönlendir
-    if (!token && pathname === '/home') {
-        return NextResponse.redirect(new URL('/', request.url));
+    if (!token) {
+        return NextResponse.redirect(new URL('/', request.url))
     }
 
     //diğer tüm durumarda normal devam et
@@ -21,8 +20,7 @@ export function middleware(request: NextRequest) {
 
 
 // middleware'ın izleyeceği yolları belirle
-
 export const config = {
-    matcher: ['/home/:*'],
+    matcher: ['/home'],
 }
 
