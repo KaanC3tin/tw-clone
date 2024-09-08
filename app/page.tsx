@@ -70,13 +70,13 @@ export default function Home() {
 
       {/* Sayfa İçeriği */}
       <div className="flex font-twitterChirpExtendedHeavy bg-black h-screen">
-        <div className="w-1/2 grid place-items-center">
-          <CustomIcon />
+        <div className=" w-1/2 grid place-items-center ">
+          <CustomIcon/>
         </div>
 
-        <div className="text-white w-1/5">
-          <div className="text-7xl lg:text-6xl md:text-5xl sm:text-4xl mt-32">Şu anda olup bitenler</div>
-          <div className="text-3xl mt-11 font-bold lg:font-semibold md:font-normal">Hemen katıl.</div>
+        <div className="text-white w-1/5  md:1/4 ">
+          <div className="text-7xl xl:text-6xl lg:text-5xl md:text-4xl  sm:text-3xl xs:text-xl md:mt-40  mt-32">Şu anda olup bitenler</div>
+          <div className="text-3xl mt-11 lg:text-2xl font-bold">Hemen katıl.</div>
           <GoogleAuth />
           <AppleAuth />
           <div className="flex items-center justify-center mt-3 my-2.5 px-5">
@@ -86,16 +86,16 @@ export default function Home() {
           </div>
           <button
             onClick={handleShowSigninModal}
-            className="bg-twitterBlue w-full h-12 text-center text-white items-center justify-center flex rounded-3xl pb-6 hover:bg-opacity-80 duration-500 ml-2"
+            className="bg-twitterBlue w-full h-12 text-center text-white flex items-center justify-center rounded-3xl hover:bg-opacity-80 duration-500 mt-4 mb-4"
           >
-            <div className="my-auto mx-auto">Hesap Oluştur</div>
+            <div className="text-base md:text-md">Hesap Oluştur</div>
           </button>
-          <div className="mt-8 mb-5 mx-4">Zaten Hesabın Var mı?</div>
+
           <button
             onClick={handleShowLoginModal}
-            className="button-base bg-black w-full h-12 text-center border border-gray-400 text-twitterBlue items-center hover:opacity-100 justify-center flex rounded-3xl pb-6 duration-500 ml-2"
+            className="button-base bg-black w-full h-12 text-center border border-gray-400 text-twitterBlue flex items-center justify-center rounded-3xl hover:opacity-100 duration-500 mt-4 mb-4"
           >
-            <div className="my-auto z-20">Giriş yap</div>
+            <div className="text-xs md:text-lg">Giriş yap</div>
           </button>
         </div>
       </div>

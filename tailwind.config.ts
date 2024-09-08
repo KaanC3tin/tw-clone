@@ -8,6 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '480px',  // Ekstra küçük ekranlar için
+        'sm': '640px',  // Küçük ekranlar
+        'md': '768px',  // Orta ekranlar
+        'lg': '1024px', // Büyük ekranlar
+        'xl': '1280px', // Extra büyük ekranlar
+        '2xl': '1536px' // Çok büyük ekranlar
+      },
       colors: {
         "twitterBlue": "#1D9BF0",
         "twitterGray": "rgb(113, 118, 123)",

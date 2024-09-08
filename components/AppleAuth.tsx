@@ -7,10 +7,7 @@ const AppheAuth = () => {
     const handleSignIn = async () => {
         const provider = new OAuthProvider("apple.com")
         const auth = getAuth();
-        // provider.setCustomParameters({
-        //     // Localize the Apple authentication screen in French.
-        //     locale: 'tr'
-        // });
+       
 
         try {
             const result = await signInWithPopup(auth, provider)

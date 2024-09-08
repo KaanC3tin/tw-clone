@@ -4,7 +4,8 @@ import TwitterIcon from "@/public/TwitterIcon.png"
 
 const CustomIcon = () => {
     return (
-        <div>
+        <div
+            >
             <Image
                 src={TwitterIcon}
                 width={650}
