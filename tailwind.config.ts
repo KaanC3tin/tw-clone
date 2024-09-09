@@ -21,6 +21,8 @@ const config: Config = {
         "twitterGray": "rgb(113, 118, 123)",
         "twitterDarkPastel": "#1E201E",
         "twitterModal": "rgba(91, 112, 131, 0.4)",
+        "twitterIConHover": "rgba(62, 65, 68, 0.5)",
+        "twitterPostBlue": "rgb(29, 155, 240)",
       },
       fontFamily: {
         twitterChirp: ['TwitterChirp', 'sans-serif'],
