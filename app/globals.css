@@ -245,9 +245,13 @@ body {
 }
 
 .leftSidebarIcons:hover {
-  background-color: rgba(62, 65, 68, 0.5);
+  background-color: rgba(62, 65, 68, 0.6);
 }
 
 span {
   margin-right: 0.8rem;
+}
+
+.iconMargin {
+  margin-right: 97px;
 }

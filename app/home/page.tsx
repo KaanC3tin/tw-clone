@@ -105,7 +105,7 @@ const Home: React.FC = () => {
                     {/* 2 sütunluk alan */}
                     <div className="col-span-3 bg-black flex flex-col">
                         <div className="flex flex-col items-center mt-2 ">
-                            <div className=' hover:bg-twitterIConHover rounded-full w-14  h-14 items-center justify-center flex mr-24   duration-1000  '>
+                                <div className=' hover:bg-twitterIConHover rounded-full w-14  h-14 items-center justify-center flex iconMargin  duration-1000  '>
                                 <Link href="/home">
                                     <Icon
                                         icon="prime:twitter"
