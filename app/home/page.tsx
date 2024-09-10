@@ -81,7 +81,7 @@ import SignOutButton from '../../components/SignOutButton';
 import TwitterIconLoading from '@/components/TwitterIconLoading';
 import { Icon } from "@iconify-icon/react";
 import Link from 'next/link';
-import LeftSideBar from "@/LeftSideBar/page"
+import LeftSideBar from "@/app/leftsidebar/page"
 
 const Home: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
@@ -105,8 +105,8 @@ const Home: React.FC = () => {
                     {/* 2 sütunluk alan */}
                     <div className="col-span-3 bg-black flex flex-col">
                         <div className="flex flex-col items-center mt-2 ">
-                            <div className=' hover:bg-twitterIConHover rounded-full w-14  h-14 items-center justify-center flex   duration-1000  '>
-                                <Link href="/home" >
+                            <div className=' hover:bg-twitterIConHover rounded-full w-14  h-14 items-center justify-center flex mr-24   duration-1000  '>
+                                <Link href="/home">
                                     <Icon
                                         icon="prime:twitter"
                                         width={32}

@@ -236,6 +236,18 @@ body {
 }
 
 /*post*/
-.post{
-  background-color:rgb(29, 155, 240);
+.post {
+  background-color: rgb(29, 155, 240);
+}
+
+.leftSideFont {
+  font-family: TwitterChirp !important;
+}
+
+.leftSidebarIcons:hover {
+  background-color: rgba(62, 65, 68, 0.5);
+}
+
+span {
+  margin-right: 0.8rem;
 }
