@@ -253,5 +253,12 @@ span {
 }
 
 .iconMargin {
-  margin-right: 97px;
+  margin-right: 131px;
+}
+
+
+.postIcon{
+  align-items: center !important;
+  justify-content: center !important;
+
 }

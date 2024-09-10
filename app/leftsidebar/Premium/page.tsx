@@ -9,7 +9,7 @@ const page = () => {
 
 
   return (
-    <div>
+    <div className='mt-0.5 mb-1 '>
       <Link href="#" className='flex items-center leftSidebarIcons rounded-full'>
         <div className='rounded-full w-14 h-14 items-center justify-center flex duration-1000'>
 

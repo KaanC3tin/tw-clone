@@ -1,80 +1,4 @@
 
-// "use client"
-// import React, { useEffect, useState } from 'react';
-// import SignOutButton from '../../components/SignOutButton';
-// import TwitterIconLoading from '@/components/TwitterIconLoading';
-// import { Icon } from "@iconify-icon/react"
-
-
-
-
-
-// const Home: React.FC = () => {
-//     const [loading, setLoading] = useState<boolean>(true)
-
-
-
-//     useEffect(() => {
-//         const timer = setTimeout(() => {
-//             setLoading(false);
-//         }, 1500)
-
-//         return () => clearTimeout(timer)
-//     }, [])
-
-
-
-//     return (
-
-//         <div className='text-white'>
-//             {loading ? (
-//                 <div>
-//                     <TwitterIconLoading />
-//                 </div>
-//             ) : (
-//                 <>
-
-
-//                     <div className="text-white grid grid-cols-8 h-screen">
-
-//                         <div className=" col-span-2 bg-gray-700">
-//                             {/* 2 sütunluk alan */}
-//                         <Icon
-//                             icon="prime:twitter"
-//                             width={40}
-//                             height={40}
-//                                 />
-//                                 <div className='  bottom-20 left-5'>
-//                                     <SignOutButton />
-//                                 </div>
-//                             <div className="flex justify-center items-center h-full">
-//                                 <p>2 sütunluk alan</p>
-//                             </div>
-//                         </div>
-//                         <div className="col-span-3 bg-gray-900">
-//                             {/* 3 sütunluk alan */}
-//                             <div className="flex justify-center items-center h-full">
-//                                 <p>3 sütunluk alan</p>
-//                             </div>
-//                             </div>
-//                             <div className="col-span-3 bg-gray-900">
-//                                 {/* 3 sütunluk alan */}
-//                                 <div className="flex justify-center items-center h-full">
-//                                     <p>3 sütunluk alan</p>
-//                                 </div>
-//                             </div>
-//                     </div>
-
-//                 </>
-//             )}
-
-//         </div>
-//     )
-// }
-
-// export default Home
-
-
 "use client"
 import React, { useEffect, useState } from 'react';
 import SignOutButton from '../../components/SignOutButton';
@@ -124,12 +48,12 @@ const Home: React.FC = () => {
                     </div>
 
                     {/* 3 sütunluk alan */}
-                    <div className="col-span-4 bg-gray-900 flex justify-center items-center">
+                    <div className="col-span-4 flex justify-center items-center max-h-screen border-gray-500 border-x-2">
                         <p>4 sütunluk alan</p>
                     </div>
 
                     {/* 3 sütunluk alan */}
-                    <div className="col-span-4 bg-gray-800 flex justify-center items-center">
+                    <div className="col-span-4 flex justify-center items-center">
                         <p>4 sütunluk alan</p>
                     </div>
                 </div>

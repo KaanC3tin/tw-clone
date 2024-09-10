@@ -14,7 +14,8 @@ const config: Config = {
         'md': '768px',  // Orta ekranlar
         'lg': '1024px', // Büyük ekranlar
         'xl': '1280px', // Extra büyük ekranlar
-        '2xl': '1536px' // Çok büyük ekranlar
+        '2xl': '1536px', // Çok büyük ekranlar
+        'custom':'1295px',
       },
       colors: {
         "twitterBlue": "#1D9BF0",
