@@ -81,10 +81,10 @@ export default function Home() {
 
               <GoogleAuth />
               <AppleAuth />
-            <div className="flex items-center justify-center mt-3 my-2.5 px-5">
-              <div className="flex-grow border-t border-gray-400"></div>
-              <span className="mx-2 text-white">veya</span>
-              <div className="flex-grow border-t border-gray-400"></div>
+            <div className="flex items-center justify-center  mt-3 my-2.5 ">
+              <div className="flex-grow border-t border-gray-400 flex"></div>
+              <span className=" text-white flex items-center justify-center ">veya</span>
+              <div className="flex-grow border-t border-gray-400 "></div>
             </div>
             <button
               onClick={handleShowSigninModal}
