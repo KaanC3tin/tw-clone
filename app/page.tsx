@@ -54,10 +54,6 @@ export default function Home() {
 
   return (
     <div className={`${inter.className} ${backgroundClassModal}`}>
-      {/* <Head>
-      //         <link rel="icon" href="/favicon.ico" />
-      //       </Head> */}
-      {/* Loading animasyonu */}
       {loading && (
         <div className="fixed inset-0 flex justify-center items-center bg-twitterModal z-50">
           <Loading />
@@ -77,15 +73,15 @@ export default function Home() {
         <div className="text-white w-1/5  md:1/4 ">
           <div className="text-7xl xl:text-6xl lg:text-5xl md:text-4xl  sm:text-3xl xs:text-xl md:mt-40  mt-32">Şu anda olup bitenler</div>
           <div className="text-3xl mt-11 lg:text-2xl font-bold">Hemen katıl.</div>
-          <div className=" ">
-
-              <GoogleAuth />
-              <AppleAuth />
-            <div className="flex items-center justify-center  mt-3 my-2.5 ">
-              <div className="flex-grow border-t border-gray-400 flex"></div>
-              <span className=" text-white flex items-center justify-center ">veya</span>
-              <div className="flex-grow border-t border-gray-400 "></div>
+          <div>
+            <GoogleAuth />
+            <AppleAuth />
+            <div className="flex items-center  justify-between mt-3 my-2.5 ">
+              <div className="flex-grow h-px bg-twitterBorder"></div>
+              <span className=" paddingL text-white  whitespace-nowrap">veya</span>
+              <div className="flex-grow h-px bg-twitterBorder"></div>
             </div>
+
             <button
               onClick={handleShowSigninModal}
               className=" bg-twitterBlue w-full  text-center text-white flex items-center justify-center rounded-3xl hover:bg-opacity-80 duration-1000"

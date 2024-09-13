@@ -256,9 +256,11 @@ span {
   margin-right: 131px;
 }
 
-
-.postIcon{
+.postIcon {
   align-items: center !important;
   justify-content: center !important;
+}
 
+.paddingL {
+  padding-left: 15px;
 }

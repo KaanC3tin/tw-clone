@@ -9,7 +9,7 @@ const TwitterIconLoading = () => {
               icon="prime:twitter"
               width={90}
               height={90}
-              className='loading-icon'
+              // className='loading-icon'
           />
     </div>
 

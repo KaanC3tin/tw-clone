@@ -14,9 +14,11 @@ export function middleware(request: NextRequest) {
     }
 
 
-    if (pathname === "/leftsidebar") {
-        return NextResponse.redirect(new URL('/', request.url))
+
+    if (pathname === "/homes") {
+        return NextResponse.redirect(new URL("/home", request.url))
     }
+
 
     //diğer tüm durumarda normal devam et
     return NextResponse.next();
@@ -27,6 +29,6 @@ export function middleware(request: NextRequest) {
 // middleware'ın izleyeceği yolları belirle
 export const config = {
     matcher: ['/home',
-        '/leftsidebar'],
+        "/homes"],
 }
 

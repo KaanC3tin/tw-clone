@@ -15,7 +15,7 @@ const config: Config = {
         'lg': '1024px', // Büyük ekranlar
         'xl': '1280px', // Extra büyük ekranlar
         '2xl': '1536px', // Çok büyük ekranlar
-        'custom':'1295px',
+        'custom': '1295px',
       },
       colors: {
         "twitterBlue": "#1D9BF0",
@@ -24,6 +24,7 @@ const config: Config = {
         "twitterModal": "rgba(91, 112, 131, 0.4)",
         "twitterIConHover": "rgba(62, 65, 68, 0.5)",
         "twitterPostBlue": "rgb(29, 155, 240)",
+        "twitterBorder": "rgb(62, 65, 68) ",
       },
       fontFamily: {
         twitterChirp: ['TwitterChirp', 'sans-serif'],
