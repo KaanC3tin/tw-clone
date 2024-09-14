@@ -1,34 +1,93 @@
-import classNames from 'classnames';
+"use client"
+import React, { useEffect, useState } from 'react';
+import SignOutButton from '../../components/SignOutButton';
+import TwitterIconLoading from '@/components/TwitterIconLoading';
+import { Icon } from "@iconify-icon/react";
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'
-import React from 'react'
+import { usePathname } from 'next/navigation';
+import { mainMenu } from '@/utilts/page';
+import Post from "@/app/post/page"
 
+const Page: React.FC = () => {
+  const pathname = usePathname()
+  const [loading, setLoading] = useState<boolean>(true);
 
-const page = () => {
-  const pathname = usePathname();
-  const isActive = pathname === "#";
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
 
   return (
-    <div className='mt-0.5 mb-1 '>
-      <Link href="#" className='flex   items-center rounded-full leftSidebarIcons duration-1000'>
-        <div className='  w-14 h-14 items-center justify-center flex'>
-          {!isActive && (<svg fill='#ffff' height={26.5} width={26.5} viewBox="0 0 24 24" aria-hidden="true" className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e"><g><path d="M5.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C15.318 13.65 13.838 13 12 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46zM12 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM8 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4z"></path></g></svg>
-
-          )}
-          {isActive && (
-            <svg fill='#ffff' height={26.5} width={26.5} viewBox="0 0 24 24" aria-hidden="true" className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e"><g><path d="M17.863 13.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44zM12 2C9.791 2 8 3.79 8 6s1.791 4 4 4 4-1.79 4-4-1.791-4-4-4z"></path></g></svg>
-          )}
+    <div className='text-white'>
+      {loading ? (
+        <div>
+          <TwitterIconLoading />
         </div>
-        <span className={classNames('text-xl  text-span', { "font-bold": isActive })}>
-          Profile
-        </span>
-      </Link>
+      ) : (
+        <div className="text-white grid grid-cols-11 h-screen">
+          {/* 3 sütunluk alan */}
+          <div className="col-span-3 bg-black flex flex-col">
+            <div className="flex flex-col items-center mt-2">
+              <Link href="/home">
+                <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000 lg:ml[0px] md:mr[0px] lg:mr-[120px]'>
+                  <Icon
+                    icon="prime:twitter"
+                    width={32}
+                    height={32}
+                  />
+                </div>
+              </Link>
+            </div>
+            <div className='flex flex-col items-center mt-4'>
+              <div className="leftSideFont">
+                {mainMenu.map((menu, index) => {
+                  const isActive = pathname === menu.path
+                  if (!menu.path) {
+                    return null;
+                  }
+                  return (
+                    <Link href={menu.path} key={index} className='flex items-center space-x-1 rounded-full duration-1000'>
+                      <div className="flex items-center justify-center w-14 h-14 duration-1000 relative">
+                        <div className='w-[26.50px] h-[26.50px] relative'>
+                          {/* Span'a doğru konumlandırmayı verelim */}
+                          {menu?.notification && (
+                            <span className='w-3.5 h-3.5 rounded-full bg-twitterPostBlue absolute top-[-0px] right-[-17px] text-[11px] flex items-center justify-center'>
+                              {menu?.notification}
+                            </span>
+                          )}
+                          {menu.icon && (isActive ? menu.icon.active : menu.icon.passive)}
+                        </div>
+                      </div>
+                      <span className='text-xl hidden lg:block'>{menu.title}</span>
+                    </Link>
+                  );
+                })}
+                <Post />
+              </div>
+            </div>
+
+            <div className="flex justify-center items-center mt-auto">
+              <SignOutButton />
+            </div>
+          </div>
+
+          {/* 4 sütunluk alan */}
+          <div className="col-span-4 flex justify-center items-center border-twitterBorder border-x">
+            <p>4 sütunluk alan</p>
+          </div>
+
+          {/* 4 sütunluk alan */}
+          <div className="col-span-4 flex justify-center items-center">
+            <p>4 sütunluk alan</p>
+          </div>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default page
-
-
-
-
+export default Page;

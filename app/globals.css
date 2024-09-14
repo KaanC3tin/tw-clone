@@ -252,9 +252,9 @@ span {
   margin-right: 0.8rem;
 }
 
-.iconMargin {
-  margin-right: 131px;
-}
+/* .iconMargin {
+  margin-right: 124px;
+} */
 
 .postIcon {
   align-items: center !important;
@@ -264,3 +264,5 @@ span {
 .paddingL {
   padding-left: 15px;
 }
+
+

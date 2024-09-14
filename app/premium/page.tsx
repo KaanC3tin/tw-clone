@@ -32,17 +32,17 @@ const Page: React.FC = () => {
           {/* 3 sütunluk alan */}
           <div className="col-span-3 bg-black flex flex-col">
             <div className="flex flex-col items-center mt-2">
-              <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 items-center justify-center flex iconMargin duration-1000'>
-                <Link href="/home">
+              <Link href="/home">
+                <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000 lg:ml[0px] md:mr[0px] lg:mr-[120px]'>
                   <Icon
                     icon="prime:twitter"
                     width={32}
                     height={32}
                   />
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
-            <div className='flex items-center justify-center'>
+            <div className='flex flex-col items-center mt-4'>
               <div className="leftSideFont">
                 {mainMenu.map((menu, index) => {
                   const isActive = pathname === menu.path
@@ -50,11 +50,19 @@ const Page: React.FC = () => {
                     return null;
                   }
                   return (
-                    <Link href={menu.path} key={index} className='flex items-center leftSidebarIcons rounded-full duration-1000'>
-                      <div className="rounded-full w-14 h-14 items-center justify-center flex duration-1000">
-                        {menu.icon && (isActive ? menu.icon.active : menu.icon.passive)}
+                    <Link href={menu.path} key={index} className='flex items-center space-x-1 rounded-full duration-1000'>
+                      <div className="flex items-center justify-center w-14 h-14 duration-1000 relative">
+                        <div className='w-[26.50px] h-[26.50px] relative'>
+                          {/* Span'a doğru konumlandırmayı verelim */}
+                          {menu?.notification && (
+                            <span className='w-3.5 h-3.5 rounded-full bg-twitterPostBlue absolute top-[-0px] right-[-17px] text-[11px] flex items-center justify-center'>
+                              {menu?.notification}
+                            </span>
+                          )}
+                          {menu.icon && (isActive ? menu.icon.active : menu.icon.passive)}
+                        </div>
                       </div>
-                      <span className='text-xl text-span'>{menu.title}</span>
+                      <span className='text-xl hidden lg:block'>{menu.title}</span>
                     </Link>
                   );
                 })}
@@ -62,13 +70,13 @@ const Page: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex justify-center items-center h-1/2">
+            <div className="flex justify-center items-center mt-auto">
               <SignOutButton />
             </div>
           </div>
 
           {/* 4 sütunluk alan */}
-          <div className="col-span-4 flex justify-center items-center max-h-screen border-twitterBorder border-x">
+          <div className="col-span-4 flex justify-center items-center border-twitterBorder border-x">
             <p>4 sütunluk alan</p>
           </div>
 

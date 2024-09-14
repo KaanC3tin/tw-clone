@@ -1,34 +1,93 @@
-import classNames from 'classnames'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react';
+import SignOutButton from '../../components/SignOutButton';
+import TwitterIconLoading from '@/components/TwitterIconLoading';
+import { Icon } from "@iconify-icon/react";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { mainMenu } from '@/utilts/page';
+import Post from "@/app/post/page"
 
-
-const page = () => {
+const Page: React.FC = () => {
   const pathname = usePathname()
-  const isActive = pathname === "#"
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
 
   return (
-    <div className='mt-0.5 mb-1 '>
-      <Link href="#" className='flex items-center  duration-1000 rounded-full leftSidebarIcons'>
-        <div className=' rounded-full w-14 h-14 items-center justify-center flex'>
-          {!isActive && (<svg fill='#ffff' height={26.5} width={26.5} viewBox="0 0 24 24" aria-hidden="true" className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e"><g><path d="M7.323 2h11.443l-3 5h6.648L6.586 22.83 7.847 14H2.523l4.8-12zm1.354 2l-3.2 8h4.676l-.739 5.17L17.586 9h-5.352l3-5H8.677z"></path></g></svg>
-          )}
-          {isActive && (<svg fill='#ffff' height={26.5} width={26.5} viewBox="0 0 24 24" aria-hidden="true" className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e"><g><path d="M18.766 2H7.323l-4.8 12h5.324l-1.261 8.83L22.414 7h-6.648l3-5z"></path></g></svg>
-          )}
+    <div className='text-white'>
+      {loading ? (
+        <div>
+          <TwitterIconLoading />
         </div>
-        <span className={classNames('text-xl  text-span', { "font-bold": isActive })}>
-          Verify Orgs
-        </span>
-      </Link>
+      ) : (
+        <div className="text-white grid grid-cols-11 h-screen">
+          {/* 3 sütunluk alan */}
+          <div className="col-span-3 bg-black flex flex-col">
+            <div className="flex flex-col items-center mt-2">
+              <Link href="/home">
+                <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000 lg:ml[0px] md:mr[0px] lg:mr-[120px]'>
+                  <Icon
+                    icon="prime:twitter"
+                    width={32}
+                    height={32}
+                  />
+                </div>
+              </Link>
+            </div>
+            <div className='flex flex-col items-center mt-4'>
+              <div className="leftSideFont">
+                {mainMenu.map((menu, index) => {
+                  const isActive = pathname === menu.path
+                  if (!menu.path) {
+                    return null;
+                  }
+                  return (
+                    <Link href={menu.path} key={index} className='flex items-center space-x-1 rounded-full duration-1000'>
+                      <div className="flex items-center justify-center w-14 h-14 duration-1000 relative">
+                        <div className='w-[26.50px] h-[26.50px] relative'>
+                          {/* Span'a doğru konumlandırmayı verelim */}
+                          {menu?.notification && (
+                            <span className='w-3.5 h-3.5 rounded-full bg-twitterPostBlue absolute top-[-0px] right-[-17px] text-[11px] flex items-center justify-center'>
+                              {menu?.notification}
+                            </span>
+                          )}
+                          {menu.icon && (isActive ? menu.icon.active : menu.icon.passive)}
+                        </div>
+                      </div>
+                      <span className='text-xl hidden lg:block'>{menu.title}</span>
+                    </Link>
+                  );
+                })}
+                <Post />
+              </div>
+            </div>
+
+            <div className="flex justify-center items-center mt-auto">
+              <SignOutButton />
+            </div>
+          </div>
+
+          {/* 4 sütunluk alan */}
+          <div className="col-span-4 flex justify-center items-center border-twitterBorder border-x">
+            <p>4 sütunluk alan</p>
+          </div>
+
+          {/* 4 sütunluk alan */}
+          <div className="col-span-4 flex justify-center items-center">
+            <p>4 sütunluk alan</p>
+          </div>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default page
-
-
-
-
-
-
+export default Page;

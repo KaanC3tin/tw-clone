@@ -15,7 +15,7 @@ const config: Config = {
         'lg': '1024px', // Büyük ekranlar
         'xl': '1280px', // Extra büyük ekranlar
         '2xl': '1536px', // Çok büyük ekranlar
-        'custom': '1295px',
+        'custom': '1295px', // post ve leftSideBarda ki yazıların hidden olması
       },
       colors: {
         "twitterBlue": "#1D9BF0",
