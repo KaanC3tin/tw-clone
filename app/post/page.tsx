@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 
 
-const page = () => {
+const Post = () => {
     const pathname = usePathname();
     const isActive = pathname === "#"
 
@@ -12,7 +12,9 @@ const page = () => {
         <div className='mt-0.5 mb-1'>
             <Link href="#" className='flex items-center duration-1000 '>
                 <div className='w-full rounded-full h-14  items-center flex duration-1000 hover:opacity-75 bg-[#1d9bf0] justify-center  hidden custom:flex' >
-                    <span className={classNames('font-twitter-bold text-span', { "font-bold": isActive })}>
+                    <span className={classNames
+                        ('font-twitter-bold text-span'
+                        , { "font-bold": isActive })}>
                         Post
                     </span>
                 </div>
@@ -25,7 +27,13 @@ const page = () => {
     )
 }
 
-export default page
+export default Post
+
+
+
+
+
+
 
 
 

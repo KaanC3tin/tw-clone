@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
+        '2xs': '240px', //  Tetris
         'xs': '480px',  // Ekstra küçük ekranlar için
         'sm': '640px',  // Küçük ekranlar
         'md': '768px',  // Orta ekranlar
