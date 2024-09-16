@@ -11,4 +11,4 @@ const More = () => {
     )
 }
 
-export default More
+export default 
