@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.8",
     "@nextui-org/popover": "^2.1.29",
     "@supabase/supabase-js": "^2.45.2",
     "@types/js-cookie": "^3.0.6",

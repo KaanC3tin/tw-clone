@@ -1,14 +1,14 @@
-import { Popover, PopoverTrigger, PopoverContent } from "@nextui-org/popover"; import React from 'react'
 
-const More = () => {
+
+import { Popover } from '@headlessui/react';
+import React from 'react';
+
+const Page = () => {
     return (
         <div>
-            <Popover>
-           
-                
-            </Popover>
+
         </div>
-    )
+    );
 }
 
-export default 
+export default Page;

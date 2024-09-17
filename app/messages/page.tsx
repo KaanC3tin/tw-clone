@@ -91,7 +91,8 @@ const Page: React.FC = () => {
                 </div>
                 <div className='mt-2'>
                   <Post />
-                </div>
+                  </div>
+            
               </div>
             </div>
 
