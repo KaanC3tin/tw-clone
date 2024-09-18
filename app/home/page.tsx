@@ -29,9 +29,9 @@ const Page: React.FC = () => {
                     <TwitterIconLoading />
                 </div>
             ) : (
-                <div className="text-white items-center flex  max-h-screen ">
+                <div className="text-white items-center flex  h-screen ">
                     {/* 3 sütunluk alan */}
-                    <div className=" bg-black flex flex-col">
+                    <div className=" bg-black flex flex-col mt-[-81px]">
                         <div className="flex flex-col items-center   ">
                             <Link href="/home">
                                 {/* <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center duration-1000  2xs:mr-[52px] xs:mr-[52px] sm:mr-[52px] md:mr-[52px] lg:mr-[120px]  xl:mr-[52px] '> */}
@@ -54,12 +54,12 @@ const Page: React.FC = () => {
                                     }
                                     return (
                                         <Link href={menu.path} key={index}
-                                            className='  flex items-center  space-x-1.5 duration-1000 group hover:bg-twitterIConHover  hover:rounded-full transition-all ease-in-out w-[200px] paddingTest'
+                                            className='  flex items-center  space-x-1.5 duration-1000 group hover:bg-twitterIConHover  hover:rounded-full transition-all ease-in-out w-[181px] '
                                         >
                                             <div className="flex items-center justify-center w-14 h-14 relative mt-0.5 mb-1">
                                                 <div className='w-[26.50px] h-[26.50px] relative'>
                                                     {menu?.notification && (
-                                                        <span className='w-3.5 h-3.5 rounded-full bg-twitterPostBlue absolute top-[-0px] right-[-17px] text-[11px] flex items-center justify-center'>
+                                                        <span className='w-3.5 h-3.5 rounded-full bg-twitterPostBlue absolute top-[-0px] right-[-17px] text-[10.5px] flex items-center justify-center'>
                                                             {menu?.notification}
                                                         </span>
                                                     )}
@@ -72,18 +72,17 @@ const Page: React.FC = () => {
 
                                     );
                                 })}
-                                <div className='justify-center'>
-                                </div>
+
                                 <div className=' mt-0.5 mb-1 flex items-center '>
                                     <More />
                                 </div>
-                                <div className='w-[240px]'>
+                                <div className='w-[240px] mt-4'>
                                     <Post />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="flex justify-center items-center mt-auto">
+                        <div className="flex justify-center items-center ">
                             <SignOutButton />
                         </div>
                     </div>

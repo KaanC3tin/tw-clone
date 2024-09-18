@@ -216,9 +216,10 @@ input:-webkit-autofill:active {
   animation: spin 0.6s linear infinite;
 }
 
-body {
+html,body {
   background-color: #000;
   background: #000;
+
 }
 
 @keyframes fade {
@@ -264,5 +265,3 @@ span {
 .paddingL {
   padding-left: 15px;
 }
-
-
