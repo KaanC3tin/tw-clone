@@ -30,7 +30,7 @@ const Page: React.FC = () => {
             ) : (
                 <div className="text-white grid grid-cols-11 h-screen">
                     {/* 3 sütunluk alan */}
-                    <div className="col-span-3 bg-black flex flex-col">
+                    <div className="col-span-3 bg-black flex flex-col px-20">
                         <div className="flex flex-col items-center mt-2 ">
                             <Link href="/home">
                                 {/* <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000  2xs:mr-[52px] xs:mr-[52px] sm:mr-[52px] md:mr-[52px] lg:mr-[120px]  xl:mr-[52px] '> */}

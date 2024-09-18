@@ -32,10 +32,10 @@ const Page: React.FC = () => {
                 <div className="text-white items-center flex  max-h-screen ">
                     {/* 3 sütunluk alan */}
                     <div className=" bg-black flex flex-col">
-                        <div className="flex flex-col items-center mt-2  ">
+                        <div className="flex flex-col items-center   ">
                             <Link href="/home">
                                 {/* <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center duration-1000  2xs:mr-[52px] xs:mr-[52px] sm:mr-[52px] md:mr-[52px] lg:mr-[120px]  xl:mr-[52px] '> */}
-                                    <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000 ml-[-18px] xl:ml-[-18px] lg:ml-[-18px] md:ml-[-18px] sm:ml-[-18px] xs:ml-[-18px] 2xs:ml-[-18px]'>
+                                <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000 ml-[-18px] xl:ml-[-18px] lg:ml-[-18px] md:ml-[-18px] sm:ml-[-18px] xs:ml-[-18px] 2xs:ml-[-18px]'>
                                     <Icon
                                         icon="prime:twitter"
                                         width={31}
@@ -54,7 +54,7 @@ const Page: React.FC = () => {
                                     }
                                     return (
                                         <Link href={menu.path} key={index}
-                                            className='  flex items-center  space-x-1.5 duration-1000 group hover:bg-twitterIConHover  hover:rounded-full transition-all ease-in-out w-[275px]'
+                                            className='  flex items-center  space-x-1.5 duration-1000 group hover:bg-twitterIConHover  hover:rounded-full transition-all ease-in-out w-[200px] paddingTest'
                                         >
                                             <div className="flex items-center justify-center w-14 h-14 relative mt-0.5 mb-1">
                                                 <div className='w-[26.50px] h-[26.50px] relative'>
@@ -75,25 +75,7 @@ const Page: React.FC = () => {
                                 <div className='justify-center'>
                                 </div>
                                 <div className=' mt-0.5 mb-1 flex items-center '>
-                                    <div className='flex items-center group hover:bg-twitterIConHover hover:rounded-full duration-1000 transition-all ease-in-out w-full -px-2 space-x-1.5'>
-                                        <div className='w-14 h-14 relative flex items-center justify-center '>
-                                            <svg
-                                                fill='#ffff'
-                                                height={26.5}
-                                                width={26.5}
-                                                viewBox="0 0 24 24"
-                                                aria-hidden="true"
-                                                className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e"
-                                            >
-                                                <g>
-                                                    <path d="M3.75 12c0-4.56 3.69-8.25 8.25-8.25s8.25 3.69 8.25 8.25-3.69 8.25-8.25 8.25S3.75 16.56 3.75 12zM12 1.75C6.34 1.75 1.75 6.34 1.75 12S6.34 22.25 12 22.25 22.25 17.66 22.25 12 17.66 1.75 12 1.75zm-4.75 11.5c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25S6 11.31 6 12s.56 1.25 1.25 1.25zm9.5 0c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25-1.25.56-1.25 1.25.56 1.25 1.25 1.25zM13.25 12c0 .69-.56 1.25-1.25 1.25s-1.25-.56-1.25-1.25.56-1.25 1.25-1.25 1.25.56 1.25 1.25z"></path>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                        <div className='text-xl -pl-4'>
-                                            More
-                                        </div>
-                                    </div>
+                                    <More />
                                 </div>
                                 <div className='w-[240px]'>
                                     <Post />
