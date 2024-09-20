@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { mainMenu } from '@/utilts/page';
 import Post from "@/app/post/page"
 import More from '@/components/More';
+import Account from '@/components/Account';
 
 const Page: React.FC = () => {
     const pathname = usePathname()
@@ -73,22 +74,25 @@ const Page: React.FC = () => {
                                     );
                                 })}
 
-                                <div className=' mt-0.5 mb-1 flex items-center '>
+                                <div className='mt-0.5 mb-1 flex items-center'>
                                     <More />
                                 </div>
                                 <div className='w-[240px] mt-4'>
                                     <Post />
-                                </div>
+                                    </div>
+                                    <div className='mt-[30px] '>
+                                        <Account/>
+                                    </div>
                             </div>
-                        </div>
-
-                        <div className="flex justify-center items-center ">
-                            <SignOutButton />
                         </div>
                     </div>
 
                     {/* 4 sütunluk alan */}
                     <div className="w-[600px]  border-twitterBorder border-x h-screen flex items-center">
+
+                        <div className="flex justify-center items-center ">
+                            <SignOutButton />
+                        </div>
                         <p>4 sütunluk alan</p>
                     </div>
 

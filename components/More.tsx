@@ -20,7 +20,7 @@ const page = () => {
                             </g>
                         </svg>
                     </div>
-                    <span className='text-lg text-white font-normal '>
+                    <span className='text-lg text-white font-normal hidden xl:block'>
                         More
                     </span>
                 </div>

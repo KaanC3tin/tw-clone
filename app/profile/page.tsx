@@ -29,7 +29,7 @@ const Page: React.FC = () => {
           <TwitterIconLoading />
         </div>
       ) : (
-        <div className="text-white items-center flex  h-screen ">
+        <div className="text-white items-center flex  h-screen">
           {/* 3 sütunluk alan */}
           <div className=" bg-black flex flex-col mt-[-81px]">
             <div className="flex flex-col items-center   ">
@@ -89,7 +89,7 @@ const Page: React.FC = () => {
 
           {/* 4 sütunluk alan */}
           <div className="w-[600px]  border-twitterBorder border-x h-screen flex items-center">
-            <p>4 sütunluk alan</p>
+            <p>Profile Page</p>
           </div>
 
           {/* 4 sütunluk alan */}
