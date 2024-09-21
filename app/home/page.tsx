@@ -32,7 +32,7 @@ const Page: React.FC = () => {
             ) : (
                 <div className="text-white items-center flex  h-screen ">
                     {/* 3 sütunluk alan */}
-                    <div className=" bg-black flex flex-col mt-[-81px]">
+                    <div className=" bg-black flex flex-col mt-[-27px]">
                         <div className="flex flex-col items-center   ">
                             <Link href="/home">
                                 {/* <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center duration-1000  2xs:mr-[52px] xs:mr-[52px] sm:mr-[52px] md:mr-[52px] lg:mr-[120px]  xl:mr-[52px] '> */}
@@ -78,10 +78,12 @@ const Page: React.FC = () => {
                                     <More />
                                 </div>
                                 <div className='w-[240px] mt-4'>
-                                    <Post />
+                                        <Post />
+                                        
+                                    <div>
+                                        <Account />
+                                        
                                     </div>
-                                    <div className='mt-[30px] '>
-                                        <Account/>
                                     </div>
                             </div>
                         </div>
@@ -89,11 +91,11 @@ const Page: React.FC = () => {
 
                     {/* 4 sütunluk alan */}
                     <div className="w-[600px]  border-twitterBorder border-x h-screen flex items-center">
+                            <SignOutButton />
 
                         <div className="flex justify-center items-center ">
-                            <SignOutButton />
                         </div>
-                        <p>4 sütunluk alan</p>
+                        <p className='text-white'>Profile Page</p>
                     </div>
 
                     {/* 4 sütunluk alan */}

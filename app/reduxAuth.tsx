@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface Account {
     id: number;
+    name: string;
     username: string;
     avatar: string;
 }
@@ -12,10 +13,11 @@ interface AccountState {
     accounts: Account[];
 }
 
-const initialState: AccountState = {
+export const initialState: AccountState = {
     // currentAccount: false,
     currentAccount: {
         id: 1,
+        name:"kaan",
         username: "n0d0dg3",
         avatar: "https://pbs.twimg.com/profile_images/1748018830683566081/bubgNnQq_400x400.jpg",
     },
@@ -24,7 +26,7 @@ const initialState: AccountState = {
 
 }
 
-const auth = createSlice({
+export const auth = createSlice({
     name: "auth",
     initialState,
     reducers: {

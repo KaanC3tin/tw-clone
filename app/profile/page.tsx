@@ -89,12 +89,14 @@ const Page: React.FC = () => {
 
           {/* 4 sütunluk alan */}
           <div className="w-[600px]  border-twitterBorder border-x h-screen flex items-center">
-            <p>Profile Page</p>
+              <div>
+              <span>Profile Page</span>
+              </div>
           </div>
 
           {/* 4 sütunluk alan */}
           <div className=" flex justify-center items-center ">
-            <p>4 sütunluk alan</p>
+            <span>Right Bar</span>
           </div>
         </div>
       )}

@@ -11,5 +11,8 @@ const store = configureStore({
 
 
 export default store;
+export type RootState=ReturnType<typeof store.getState>
+
+
 // Infer the type of makeStore
 // export type AppStore = ReturnType<typeof makeStore>

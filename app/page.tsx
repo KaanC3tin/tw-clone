@@ -9,6 +9,7 @@ import CustomIcon from "@/components/CustomIcon";
 import GoogleAuth from "@/components/GoogleAuth";
 import Loading from "@/components/Loading";
 import AppleAuth from '@/components/AppleAuth';
+import classNames from 'classnames';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,12 +72,12 @@ export default function Home() {
         </div>
 
         <div className="text-white w-1/5  md:1/4 ">
-          <div className="text-7xl xl:text-6xl lg:text-5xl md:text-4xl  sm:text-3xl xs:text-xl md:mt-40  mt-32 w-[450px]">Şu anda olup bitenler</div>
-          <div className="text-3xl mt-11 lg:text-2xl font-bold">Hemen katıl.</div>
+          <div className="text-[64px] xl:text-6xl lg:text-5xl md:text-4xl  sm:text-3xl xs:text-xl md:mt-40  mt-32 w-[450px]">Şu anda olup bitenler</div>
+          <div className="text-[31px] mt-11 lg:text-2xl font-bold">Hemen katıl.</div>
           <div>
             <GoogleAuth />
             <AppleAuth />
-            <div className="flex items-center  justify-between mt-3 my-2.5 ">
+            <div className="flex items-center  justify-between mt-3 my-2.5  pr-24 px-10">
               <div className="flex-grow h-px bg-twitterBorder"></div>
               <span className=" paddingL text-white  whitespace-nowrap">veya</span>
               <div className="flex-grow h-px bg-twitterBorder"></div>
@@ -86,8 +87,12 @@ export default function Home() {
               onClick={handleShowSigninModal}
               className=" bg-twitterBlue w-ful  text-center text-white flex items-center justify-center rounded-3xl hover:bg-opacity-72 duration-1000 transition-colors ease-in-out"
             >
-              <div className="text-base md:text-base">Hesap Oluştur</div>
+              <div className="text-[15px] md:text-base">Hesap Oluştur</div>
+
             </button>
+            <div className="mt-[50px] text-white text-[17px]">
+              Zaten bir hesabın var mı?
+            </div>
 
             <button
               onClick={handleShowLoginModal}
