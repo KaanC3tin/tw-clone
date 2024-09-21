@@ -9,6 +9,8 @@ import { mainMenu } from '@/utilts/page';
 import Post from "@/app/post/page"
 import More from '@/components/More';
 import Account from '@/components/Account';
+import MiddleBar from '@/components/MiddleBar';
+import RightBar from '@/components/RightBar';
 
 const Page: React.FC = () => {
     const pathname = usePathname()
@@ -32,7 +34,7 @@ const Page: React.FC = () => {
             ) : (
                 <div className="text-white items-center flex  h-screen ">
                     {/* 3 sütunluk alan */}
-                    <div className=" bg-black flex flex-col mt-[-27px]">
+                    <div className=" bg-black flex flex-col mt-[-23px]">
                         <div className="flex flex-col items-center   ">
                             <Link href="/home">
                                 {/* <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center duration-1000  2xs:mr-[52px] xs:mr-[52px] sm:mr-[52px] md:mr-[52px] lg:mr-[120px]  xl:mr-[52px] '> */}
@@ -78,29 +80,29 @@ const Page: React.FC = () => {
                                     <More />
                                 </div>
                                 <div className='w-[240px] mt-4'>
-                                        <Post />
-                                        
-                                    <div>
+                                    <Post />
+
+                                    <div >
                                         <Account />
-                                        
+
+
                                     </div>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     {/* 4 sütunluk alan */}
-                    <div className="w-[600px]  border-twitterBorder border-x h-screen flex items-center">
-                            <SignOutButton />
-
-                        <div className="flex justify-center items-center ">
+                    <div className="w-[600px]  border-twitterBorder border-x h-screen ">
+                        <MiddleBar />
+                    </div>
+                    {/* <div className="flex justify-center items-center ">
                         </div>
                         <p className='text-white'>Profile Page</p>
-                    </div>
 
                     {/* 4 sütunluk alan */}
-                    <div className=" flex justify-center items-center ">
-                        <p>4 sütunluk alan</p>
+                    <div className='h-screen'>
+                        <RightBar />
                     </div>
                 </div>
             )}

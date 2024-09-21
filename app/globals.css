@@ -265,3 +265,7 @@ span {
 .paddingL {
   padding-left: 15px;
 }
+
+.account-wFull{
+  width: full !important;
+}

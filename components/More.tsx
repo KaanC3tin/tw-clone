@@ -26,7 +26,7 @@ const page = () => {
                 </div>
             </PopoverButton>
             <PopoverPanel className="absolute w-[318px] bottom-0 left-0 bg-black  shadow-box rounded-xl flex flex-col  text-xl overflow-hidden">
-                <div className='flex items-center px-5 py-4 hover:bg-twitterIConHover hover:rounded-xl'>
+                <div className='flex items-center px-5 py-4 hover:bg-twitterIConHover hover:rounded-md'>
                     <svg fill='#ffff' height={24} width={24} viewBox="0 0 24 24" aria-hidden="true" className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-1q142lx r-1kihuf0 r-1472mwg r-di8nfa r-lrsllp" data-testid="icon"><g><path d="M3 4.5C3 3.12 4.12 2 5.5 2h13C19.88 2 21 3.12 21 4.5v15c0 1.38-1.12 2.5-2.5 2.5h-13C4.12 22 3 20.88 3 19.5v-15zM5.5 4c-.28 0-.5.22-.5.5v15c0 .28.22.5.5.5h13c.28 0 .5-.22.5-.5v-15c0-.28-.22-.5-.5-.5h-13zM16 10H8V8h8v2zm-8 2h8v2H8v-2z"></path></g></svg>
                     <span className='flex items-center justify-center px-5 font-bold text-xl'>Lists</span>
                 </div>
