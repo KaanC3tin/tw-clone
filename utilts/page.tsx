@@ -123,3 +123,71 @@ export const mainMenu = [
         }
     },
 ]
+
+export const trends = [
+    {
+        title: "Trending in Turkey",
+        trend: {
+            type: "query",
+            value: "KPSS",
+            score: "16.8k posts",
+        },
+    },
+    {
+        title: "Entertainment • Trending",
+        trend: {
+            type: "tag",
+            value: "NisaBölükbaşı",
+            score: "16.8k posts",
+        }
+    }, {
+        title: "Trending in Turkey",
+        trend: {
+            type: "query",
+            value: "IPTV",
+        }
+    }, {
+        title: "Trending in Turkey",
+        trend: {
+            type: "tag",
+            value: "AfRam",
+            score: "16.8k posts",
+        }
+    }, {
+        title: "Trending in Turkey",
+        trend: {
+            type: "tag",
+            value: "NarinCocukNeYasadı",
+            score: "16.8k posts",
+        }
+    }, {
+        title: "Trending in Turkey",
+        trend: {
+            type: "tag",
+            value: "hamster",
+            score: "78k posts",
+        }
+    }, {
+        title: "Trending in Turkey",
+        trend: {
+            type: "query",
+            value: "Ege Denizi",
+            score: "16.8k posts",
+        }
+    }, {
+        title: "Trending in Turkey",
+        trend: {
+            type: "tag",
+            value: "ArasBulutIynemli",
+            score: "16.8k posts",
+        }
+    }, {
+        title: "Trending in Turkey",
+        trend: {
+            type: "query",
+            value: "Acun",
+            score: "16.8k posts",
+        }
+    },
+
+]

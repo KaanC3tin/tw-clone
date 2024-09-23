@@ -85,18 +85,18 @@ export default function Home() {
 
             <button
               onClick={handleShowSigninModal}
-              className=" bg-twitterBlue w-ful  text-center text-white flex items-center justify-center rounded-3xl hover:bg-opacity-72 duration-1000 transition-colors ease-in-out"
+              className=" w-ful  text-center  flex items-center justify-center rounded-3xl hover:bg-[#1a8cd8] hover:opacity-90  duration-1000 transition-colors ease-in-out button w-[300px] h-[40px] !bg-[#1d9bf0] !text-white text-[15px] font-normal"
             >
-              <div className="text-[15px] md:text-base">Hesap Oluştur</div>
+              <div className="text-[15px] md:text-base ">Hesap Oluştur</div>
 
             </button>
-            <div className="mt-[50px] text-white text-[17px]">
+            <div className="mt-[50px] text-white text-[17px] ">
               Zaten bir hesabın var mı?
             </div>
 
             <button
               onClick={handleShowLoginModal}
-              className="button bg-black w-full  text-center border border-gray-400 text-twitterBlue flex items-center justify-center rounded-3xl  duration-1000 mt-4 button-base ease-in-out transition-colors"
+              className="button bg-black w-full  text-center border !border-gray-400 !text-twitterBlue flex items-center justify-center rounded-3xl  duration-1000 mt-4 button-base ease-in-out transition-colors text-[15px] font-normal"
             >
               <div className="text-xs md:text-base">Giriş yap</div>
             </button>

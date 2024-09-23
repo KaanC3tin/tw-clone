@@ -103,7 +103,7 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-button {
+.button {
   justify-content: center;
   max-width: 330px;
   align-items: center;
@@ -269,3 +269,4 @@ span {
 .account-wFull{
   width: full !important;
 }
+
