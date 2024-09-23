@@ -75,7 +75,6 @@ const Page: React.FC = () => {
 
                                     );
                                 })}
-
                                 <div className='mt-0.5 mb-1 flex items-center'>
                                     <More />
                                 </div>
@@ -92,15 +91,10 @@ const Page: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* 4 sütunluk alan */}
                     <div className="w-[600px]  border-twitterBorder border-x h-screen ">
                         <MiddleBar />
                     </div>
-                    {/* <div className="flex justify-center items-center ">
-                        </div>
-                        <p className='text-white'>Profile Page</p>
-
-                    {/* 4 sütunluk alan */}
+                  
                     <div className='h-screen'>
                         <RightBar />
                     </div>
