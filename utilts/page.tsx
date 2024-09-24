@@ -130,7 +130,7 @@ export const trends = [
         trend: {
             type: "query",
             value: "KPSS",
-            score: "16.8k posts",
+            score: "53.9k posts",
         },
     },
     {
@@ -151,14 +151,14 @@ export const trends = [
         trend: {
             type: "tag",
             value: "AfRam",
-            score: "16.8k posts",
+            score: "22.1k posts",
         }
     }, {
         title: "Trending in Turkey",
         trend: {
             type: "tag",
             value: "NarinCocukNeYasadı",
-            score: "16.8k posts",
+            score: "1.2k posts",
         }
     }, {
         title: "Trending in Turkey",
@@ -172,22 +172,23 @@ export const trends = [
         trend: {
             type: "query",
             value: "Ege Denizi",
-            score: "16.8k posts",
+            score: "11.8k posts",
         }
     }, {
         title: "Trending in Turkey",
         trend: {
             type: "tag",
             value: "ArasBulutIynemli",
-            score: "16.8k posts",
+            score: "20.5k posts",
         }
     }, {
         title: "Trending in Turkey",
         trend: {
             type: "query",
             value: "Acun",
-            score: "16.8k posts",
+            score: "34.9k posts",
         }
     },
 
 ]
+

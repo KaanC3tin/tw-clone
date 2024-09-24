@@ -17,11 +17,11 @@ const Account = () => {
                     style={{ transform: "none", transition: "none" }}>
                     <Image src={account?.avatar} alt='avatar' width={40} height={40} className='rounded-full ' />
                     <div className='w-[221px] grid grid-cols items-center text-[15px] font-normal'>
-                        <div className='flex'>
+                        <div className='flex mx-3'>
                             {account?.name}
                         </div>
                         <div className='flex'>
-                            <div className='text-[#71767b] text-[15px] '>
+                            <div className='text-[#71767b] text-[15px] mx-3 '>
                                 {account?.username}
                             </div>
                         </div>

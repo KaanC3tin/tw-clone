@@ -3,6 +3,7 @@ import Search from './Search'
 import SubscribeRightBar from './SubscribeRightBar'
 import Trends from './TrendsBar'
 import WhoFollowMe from './WhoFollowMe'
+import Footer from './Footer'
 
 const RightBar = () => {
     return (
@@ -11,7 +12,8 @@ const RightBar = () => {
                 <Search />
                 <SubscribeRightBar />
                 <Trends />
-                <WhoFollowMe/>
+                <WhoFollowMe />
+                {/* <Footer/> */}
             </div>
         </div>
     )
