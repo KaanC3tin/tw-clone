@@ -33,12 +33,25 @@ const Page: React.FC = () => {
                 </div>
             ) : (
                 <div className="text-white items-center flex  h-screen ">
-                    {/* 3 sütunluk alan */}
                     <div className=" bg-black flex flex-col mt-[-23px]">
                         <div className="flex flex-col items-center   ">
                             <Link href="/home">
                                 {/* <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center duration-1000  2xs:mr-[52px] xs:mr-[52px] sm:mr-[52px] md:mr-[52px] lg:mr-[120px]  xl:mr-[52px] '> */}
-                                <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000 ml-[-18px] xl:ml-[-18px] lg:ml-[-18px] md:ml-[-18px] sm:ml-[-18px] xs:ml-[-18px] 2xs:ml-[-18px]'>
+                                {/* <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000 ml-[-18px] xl:ml-[-18px] lg:ml-[-18px] md:ml-[-18px] sm:ml-[-18px] xs:ml-[-18px] 2xs:ml-[-18px]'>
+                                    <Icon
+                                        icon="prime:twitter"
+                                        width={31}
+                                        height={31}
+                                    />
+                                </div> */}
+                            </Link>
+
+                        </div>
+                        <div className='flex flex-col justify-center ml-[300px] w-[275px] mt-2 hover:rounded-full transition-all ease-in-out duration-1000' >
+                           <Link href="/home">
+                                {/* <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center duration-1000  2xs:mr-[52px] xs:mr-[52px] sm:mr-[52px] md:mr-[52px] lg:mr-[120px]  xl:mr-[52px] '> */}
+                                    <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000'>
+                                        {/* ml-[-18px] xl:ml-[-18px] lg:ml-[-18px] md:ml-[-18px] sm:ml-[-18px] xs:ml-[-18px] 2xs:ml-[-18px] */}
                                     <Icon
                                         icon="prime:twitter"
                                         width={31}
@@ -46,9 +59,6 @@ const Page: React.FC = () => {
                                     />
                                 </div>
                             </Link>
-
-                        </div>
-                        <div className='flex flex-col justify-center ml-[200px] w-[275px] mt-2 hover:rounded-full transition-all ease-in-out duration-1000' >
                             <div className="leftSideFont">
                                 {mainMenu.map((menu, index) => {
                                     const isActive = pathname === menu.path

@@ -16,7 +16,7 @@ export default function WhoFollowMe<T>({ title, more }: RightbarLayoutProps<T>) 
                 {whoFollowUsers.map((user, index) => (
                     <div key={index}
                         className='hover:bg-zinc-950 py-3'>
-                        <button className='flex mx-3.5'>
+                        <button className='flex mx-4'>
                             <Image src={user.avatar} width={40} height={40} className='rounded-full' alt='avatar'></Image>
                             <div className='flex flex-col '>
                                 <span>{user.name}</span>

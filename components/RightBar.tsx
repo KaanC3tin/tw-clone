@@ -7,13 +7,13 @@ import Footer from './Footer'
 
 const RightBar = () => {
     return (
-        <div className=' mt-[5px] font-twitterChirp '>
+        <div className=' mt-[5px] font-twitterChirp'>
             <div className='ml-[32px]'>
                 <Search />
                 <SubscribeRightBar />
                 <Trends />
                 <WhoFollowMe />
-                {/* <Footer/> */}
+                <Footer />
             </div>
         </div>
     )

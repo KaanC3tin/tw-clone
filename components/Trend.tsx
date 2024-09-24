@@ -21,7 +21,7 @@ const Trend: React.FC<TrendProps> = ({ item }) => {
       <Link href="/home"
         className='py-3   '>
         <div className='hover:bg-zinc-950'>
-          <div className='mx-3.5 my-1 py-2'>
+          <div className='mx-4 my-1 py-2'>
             <Popover className="relative">
               <div className='text-[#71767b] font-normal text-[13px] flex items-center justify-between '>
                 <div >{item.title}</div>

@@ -4,20 +4,33 @@ import { useAccount } from '@/lib/hook';
 import Image from 'next/image';
 import AccountMore from './AccountMore';
 
-const Account = () => {
-    const account = useAccount()
 
+interface AccountProps {
+    avatar: string | undefined;
+    name: string;
+    username: string;
+}
+
+const Account: React.FC<AccountProps> = ({ avatar, name, username }) => {
+    const account = useAccount()
 
     return (
         // <div className='w-[266px] mt-auto'>
         <div className='w-[266px] z-50'>
             <Popover className="relative">
-                <PopoverButton className="bg-black hover:bg-[#eff3f41a] h-[65px] rounded-full mt-[30px] pl-3 my-3 text-white 
+                <PopoverButton className="bg-black hover:bg-[#eff3f41a] h-[65px] rounded-full mt-[30px] pl-2 my-3 text-white 
                     outline-none focus:outline-none focus:ring-0 flex items-center justify-between"
                     style={{ transform: "none", transition: "none" }}>
-                    <Image src={account?.avatar} alt='avatar' width={40} height={40} className='rounded-full ' />
+                    {account?.avatar && (
+                        <Image
+                            src={account.avatar}
+                            alt='avatar'
+                            width={40} height={40}
+                            className='rounded-full ' />
+                    )}
                     <div className='w-[221px] grid grid-cols items-center text-[15px] font-normal'>
                         <div className='flex mx-3'>
+
                             {account?.name}
                         </div>
                         <div className='flex'>

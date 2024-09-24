@@ -77,9 +77,9 @@ export default function Home() {
           <div>
             <GoogleAuth />
             <AppleAuth />
-            <div className="flex items-center  justify-between mt-3 my-2.5  px-10">
+            <div className="flex items-center  justify-between mt-3 my-2.5  px-1.5 mr-[54px] ">
               <div className="flex-grow h-px bg-twitterBorder"></div>
-              <span className=" paddingL text-white  whitespace-nowrap">veya</span>
+              <span className=" paddingL text-white font-normal text-[15px]">veya</span>
               <div className="flex-grow h-px bg-twitterBorder"></div>
             </div>
 
@@ -87,18 +87,42 @@ export default function Home() {
               onClick={handleShowSigninModal}
               className=" w-ful  text-center  flex items-center justify-center rounded-3xl hover:bg-[#1a8cd8] hover:opacity-90  duration-1000 transition-colors ease-in-out button w-[300px] h-[40px] !bg-[#1d9bf0] !text-white text-[15px] font-normal"
             >
-              <div className="text-[15px] md:text-base ">Hesap Oluştur</div>
-
+              <div className="text-[15px] md:text-base  font-twitterChirp font-bold ">Hesap Oluştur</div>
             </button>
-            <div className="mt-[50px] text-white text-[17px] ">
+            <div className="text-[11px] font-normal font-twitterChirp mt-[9px]">
+              <span>
+                <span className="text-[#71767b]">
+              By signing up, you agree to the
+                </span>
+              <span className="text-twitterBlue -ml-1.5">
+            Terms of Service
+              </span>
+                <span className="text-[#71767b] -ml-1.5">
+                and
+            </span>
+              <span className=" text-twitterBlue -ml-2">
+                  Privacy
+              </span>
+                  <span className="text-twitterBlue flex">
+                  Policy
+                <span className=" text-[#71767b] ml-0.5 ">
+                 ,including
+              </span>
+              <span className="text-twitterBlue -ml-2">
+              Cookie Use.
+              </span>
+                  </span>
+            </span>
+            <div className="mt-[50px] text-white text-[17px] font-twitterChirp">
               Zaten bir hesabın var mı?
+           </div>
             </div>
 
             <button
               onClick={handleShowLoginModal}
               className="button bg-black w-full  text-center border !border-gray-400 !text-twitterBlue flex items-center justify-center rounded-3xl  duration-1000 mt-4 button-base ease-in-out transition-colors text-[15px] font-normal"
             >
-              <div className="text-xs md:text-base">Giriş yap</div>
+              <div className=" text-[15px] md:text-base font-twitterChirp font-bold">Giriş yap</div>
             </button>
           </div>
         </div>
