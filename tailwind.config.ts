@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        "150vh": "150vh",
+        "200vh": "200vh",
+        "250vh": "250vh",
+        "300vh":"300vh"
+      },
       boxShadow: {
         box: 'rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px'
       },

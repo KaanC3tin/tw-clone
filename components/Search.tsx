@@ -3,7 +3,7 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 
 const Search = () => {
   return (
-    <div className='sticky top-0 bg-black'>
+    <div className='sticky top-1 bg-black z-20'>
       <Popover>
         <PopoverButton
         className='h-[42px] w-[350px] bg-[#202327]  px-5 flex items-center border border-transparent rounded-full  focus-within:border-[#1d9bf0] focus-within:bg-black  z-30'

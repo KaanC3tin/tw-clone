@@ -36,7 +36,7 @@ const SignOutButton: React.FC = () => {
   return (
     <div className=''>
       <button onClick={handleSignOut}
-        className='justify-start  text-sm font-semibold bg-black hover:bg-twitterIConHover hover:rounded-none   text-white'>
+        className='justify-start ml-4 text-sm font-semibold  pt-2 pb-2  text-white'>
         Çıkış Yap
       </button>
       {signOutMessage && (

@@ -8,6 +8,12 @@ export interface RightbarLayoutProps<T> {
     title?: string;
     children?: ReactNode;
     more?: string;
+    id?: number;
+    user?: {
+        name?: string;
+        username?: string;
+        avatar: string;
+    }
 }
 
 export default function RightbarLayout<T>({ title, more, children }: RightbarLayoutProps<T>) {

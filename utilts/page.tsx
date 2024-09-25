@@ -110,8 +110,6 @@ export const mainMenu = [
             ),
         }
     }, {
-        // path: "/profile",
-        // path: `/${states?.auth?.currentAccount?.username}`,
         path: `/profile/${states?.auth?.currentAccount?.username}`,
         title: "Profile",
         icon: {

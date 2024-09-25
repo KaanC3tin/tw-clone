@@ -5,8 +5,8 @@ import Image from 'next/image';
 import AccountMore from './AccountMore';
 
 
-interface AccountProps {
-    avatar: string | undefined;
+interface  AccountProps {
+    avatar: string ;
     name: string;
     username: string;
 }
