@@ -12,7 +12,7 @@ export interface RightbarLayoutProps<T> {
     user?: {
         name?: string;
         username?: string;
-        avatar: string;
+        avatar: string ;
     }
 }
 

@@ -22,12 +22,12 @@ export const initialState: AccountState = {
         avatar: "https://pbs.twimg.com/profile_images/1748018830683566081/bubgNnQq_400x400.jpg",
     },
     accounts: [
-        {
-            id: 1,
-            name: "kaan",
-            username: "n0d0dg3",
-            avatar: "https://pbs.twimg.com/profile_images/1748018830683566081/bubgNnQq_400x400.jpg"
-        }
+        // {
+        //     id: 1,
+        //     name: "kaan",
+        //     username: "n0d0dg3",
+        //     avatar: "https://pbs.twimg.com/profile_images/1748018830683566081/bubgNnQq_400x400.jpg"
+        // }
         // }, {
         //     id: 2,
         //     name: "kaan",
