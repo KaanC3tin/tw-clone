@@ -93,7 +93,9 @@ const Page: React.FC = () => {
                     </div>
 
                     <div className="w-[600px]  border-twitterBorder border-x h-screen ">
-                        <MiddleBar />
+                            <MiddleBar />
+                            
+                            
                     </div>
 
                     <div className='h-screen'>

@@ -1,8 +1,14 @@
 import React from 'react'
+import Topbar from './Topbar'
 
 const MiddleBar = () => {
   return (
-    <div>Profile Page!</div>
+    <div className='text-white '>
+      <Topbar />
+      <div className='mt-[53px]'>
+        asdad
+      </div>
+    </div>
   )
 }
 

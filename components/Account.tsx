@@ -16,9 +16,9 @@ const Account: React.FC<AccountProps> = ({ avatar, name, username }) => {
 
     return (
         // <div className='w-[266px] mt-auto'>
-        <div className='w-[266px] z-50'>
+        <div className='w-[244px] h-[65px] z-50'>
             <Popover className="relative">
-                <PopoverButton className="bg-black hover:bg-[#eff3f41a] h-[65px] rounded-full mt-[30px] pl-2 my-3 text-white 
+                <PopoverButton className="bg-black hover:bg-[#eff3f41a] h-[65px] rounded-full mt-[30px] px-2 my-3 text-white 
                     outline-none focus:outline-none focus:ring-0 flex items-center justify-between"
                     style={{ transform: "none", transition: "none" }}>
                     {account?.avatar && (
