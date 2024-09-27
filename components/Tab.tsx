@@ -39,7 +39,7 @@ export default function Tab({ children, activeTab }: TabProps) {
 
   return (
     <TabContext.Provider value={data}>
-      {items}
+      {items} 
       {contents.map((content) =>
         content.props.id === active && content
       )}
