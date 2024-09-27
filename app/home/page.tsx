@@ -35,7 +35,7 @@ const Page: React.FC = () => {
                     <div className=" bg-black flex flex-col mt-[-23px]  ">
                         {/* <div className="flex flex-col items-center">
                         </div> */}
-                        <div className='flex flex-col justify-center ml-[320px] w-[275px] h-[933px] mt-2 hover:rounded-full transition-all ease-in-out duration-1000' >
+                        <div className='flex flex-col justify-center ml-[208px] w-[275px] h-[933px] mt-2 hover:rounded-full transition-all ease-in-out duration-1000' >
                             <div className="leftSideFont fixed top-0 ">
                                 <Link href="/home">
                                     <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000 '>
@@ -86,7 +86,7 @@ const Page: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="w-[600px]  border-twitterBorder  border-x  min-h-screen !text-white">
+                    <div className="w-[600px]  border-twitterBorder  border-x  h-screen !text-white">
                         <MiddleBar />
                     </div>
 
