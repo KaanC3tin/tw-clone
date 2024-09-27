@@ -2,7 +2,8 @@ import Item from './Item';
 import Items from './Items';
 import Content from './Content';
 import { TabContext } from '@/lib/TabContext';
-import { ReactElement, useState } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
+import StyleTopBar from './StyleTopBar';
 
 
 
@@ -18,18 +19,30 @@ export default function Tab({ children, activeTab }: TabProps) {
   const [active, setActive] = useState(activeTab)
 
   const contents = children.filter(c => c.type === Content)
-  const items = children.filter(c => c.type === Items)
+  const styleTopBar = children.filter(c => c.type === StyleTopBar)
+  const items = styleTopBar[0]
 
+
+  const onChange = (id: string) => {
+    setActive(id)
+  }
+
+  useEffect(() => {
+    setActive(activeTab)
+  }, [activeTab])
 
   const data = {
-    activeTab,
-    setActive
+    active,
+    setActive,
+    onChange
   }
 
   return (
     <TabContext.Provider value={data}>
       {items}
-      {/* {content} */}
+      {contents.map((content) =>
+        content.props.id === active && content
+      )}
     </TabContext.Provider>
 
   )
