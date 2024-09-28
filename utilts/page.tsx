@@ -110,7 +110,7 @@ export const mainMenu = [
             ),
         }
     }, {
-        path: `/profile/${states?.auth?.currentAccount?.username}`,
+        path: `/profile/${states?.auth?.currentAccount?.userName}`,
         title: "Profile",
         icon: {
             active: (<svg fill='#ffff' height={26.5} width={26.5} viewBox="0 0 24 24" aria-hidden="true" className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e" > <g><path d="M17.863 13.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44zM12 2C9.791 2 8 3.79 8 6s1.791 4 4 4 4-1.79 4-4-1.791-4-4-4z"></path></g></svg>
@@ -189,4 +189,152 @@ export const trends = [
     },
 
 ]
+
+export const posts = [
+    // {
+    //     id: '1708810187170087411',
+    //     type: 'poll',
+    //     content: `Kahvaltıda en çok hangi seçeneği tercih edersiniz?
+    //     Bu anket sabah kahvaltısı sırasında sorulmuştur.`,
+    //     poll: {
+    //         voted: false,
+    //         votes: 15,
+    //         answers: [
+    //             {
+    //                 id: 1,
+    //                 text: 'Simit',
+    //                 votes: 6
+    //             },
+    //             {
+    //                 id: 2,
+    //                 text: 'Poğaça',
+    //                 votes: 4
+    //             },
+    //             {
+    //                 id: 3,
+    //                 text: 'Yumurta',
+    //                 votes: 5
+    //             }
+    //         ]
+    //     },
+    //     account: {
+    //         avatar: 'https://pbs.twimg.com/profile_images/1200814302820753410/AhAh3xlU_400x400.png',
+    //         userName: 'kahvaltici',
+    //         fullName: 'Kahvaltı Dostları'
+    //     },
+    //     stats: {
+    //         comments: 100,
+    //         repost: 20,
+    //         like: 500,
+    //         view: 1500
+    //     }
+    // },
+    {
+        id: '1708810187170087412',
+        type: 'photo',
+        content: [``],
+        photo: [
+            "https://pbs.twimg.com/media/GYjJy62WYAAMTHQ?format=jpg&name=small",
+        ],
+        account: {
+            avatar: "https://pbs.twimg.com/profile_images/1815749056821346304/jS8I28PL_400x400.jpg",
+            userName: 'elonmusk',
+            fullName: 'Elon Musk',
+            verified: true
+        },
+        stats: {
+            comments: 50,
+            repost: 10,
+            like: 300,
+            view: 800
+        }
+    },
+    {
+        id: '1708810187170087413',
+        type: 'photo',
+        content: ['🇧🇪 FN M249S 18.5',
+            '▫️5.56x45mm NATO',
+            '▪️Price(MSRP): $10, 584',
+            '▪️7,8kg'],
+        photo: [
+            'https://pbs.twimg.com/media/GYff4bjWkAEZsyB?format=jpg&name=small',
+        ],
+        account: {
+            avatar: 'https://pbs.twimg.com/profile_images/1776865800307060736/rhxxKVRw_normal.jpg',
+            userName: 'firearmsdaily_',
+            fullName: 'Firearms & Patriotism'
+        },
+        stats: {
+            comments: 200,
+            repost: 50,
+            like: 600,
+            view: 1500
+        }
+    },
+    {
+        id: '1708810187170087414',
+        content: [`new cat color just dropped`],
+        photo: [
+            "https://pbs.twimg.com/media/GYcvYJ9aQAAjsZS?format=jpg&name=small",
+        ],
+        account: {
+            avatar: "	https://pbs.twimg.com/profile_images/1828145724963561472/CzV0LTLP_normal.png",
+            userName: 'PunchingCat',
+            fullName: 'Punch Cat',
+            verified: true
+        },
+        stats: {
+            comments: 10,
+            repost: 5,
+            like: 100,
+            view: 300
+        }
+    },
+    {
+        id: '1708810187170087415',
+        type: 'photo',
+        content: [`Büyükşehirdeki yaşam temposu! 🏙️`],
+        photo: [
+            'https://pbs.twimg.com/media/F7XXKj9WgAA6Cw4?format=jpg&name=900x900',
+            'https://pbs.twimg.com/media/F7XXKj9WgAA6Cw5?format=jpg&name=900x900'
+        ],
+        account: {
+            avatar: 'https://pbs.twimg.com/profile_images/1707827931895017472/1-bUbTT3_400x400.jpg',
+            userName: 'sehir_hayati',
+            fullName: 'Şehir Hayatı'
+
+        },
+        stats: {
+            comments: 150,
+            repost: 25,
+            like: 400,
+            view: 1200
+        }
+    },
+    {
+        id: '1708810187170087416',
+        type: 'photo',
+        content: [`Gorgeous @Tesla Solar Roof install near Galveston Texas by Paradigm Roofing – Every house should have this.`],
+        photo: [
+            "https://pbs.twimg.com/media/GYhhAe8asAE8wsQ?format=jpg&name=small",
+            // 'https://pbs.twimg.com/media/F7XXKj9WgAA6Cw7?format=jpg&name=large',
+        ],
+        account: {
+            avatar: "https://pbs.twimg.com/profile_images/1515410865499119620/s1ws6CFZ_400x400.jpg",
+            userName: 'ajtourville',
+            fullName: 'ALEX',
+            verified: true,
+            // name: "kaan",
+            // userName: "n0d0dg3",
+            // avatar: "https://pbs.twimg.com/profile_images/1748018830683566081/bubgNnQq_400x400.jpg",
+        },
+        stats: {
+            comments: 250,
+            repost: 300,
+            like: 700,
+            view: 2000
+        }
+    }
+];
+
 

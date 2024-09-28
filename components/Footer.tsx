@@ -31,7 +31,7 @@ const Footer = () => {
                             <PopoverButton className='hover:underline '>
                                 More ...
                             </PopoverButton>
-                            <PopoverPanel className="bg-black absolute overflow-hidden  flex flex-col outline-none  text-[15px] font-twitterChirp font-bold shadow-box text-white rounded-xl">
+                            <PopoverPanel className="bg-black absolute bottom-full  overflow-hidden  flex flex-col outline-none  text-[15px] font-twitterChirp font-bold shadow-box text-white rounded-xl">
                                 <Link className=' hover:bg-twitterIConHover w-[176px] h-[44] py-3 px-2 leading-5' href="/home">About</Link>
                                 <Link className=' hover:bg-twitterIConHover w-[176px] h-[44] py-3 px-2 leading-5' href="/home">Download the X app</Link>
                                 <Link className=' hover:bg-twitterIConHover w-[176px] h-[44] py-3 px-2 leading-5' href="/home">X for Business</Link>

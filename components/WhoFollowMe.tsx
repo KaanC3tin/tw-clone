@@ -12,7 +12,7 @@ export default function WhoFollowMe<T>({ title, more }: RightbarLayoutProps<T>) 
 
     const account = useAccount()
     return (
-        <div>
+        <div > 
             <RightbarLayout
                 title={"Who to follow"}
                 more={`/i/connect_people?user_id=${account?.id}`}>

@@ -6,6 +6,7 @@ import RightbarLayout from './RightbarLayout'
 const Trends = () => {
     return (
 
+        
         <RightbarLayout
             title={"Trend for you"}
             more="/trends">

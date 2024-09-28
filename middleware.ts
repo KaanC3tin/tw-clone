@@ -9,15 +9,15 @@ export function middleware(request: NextRequest) {
 
 
     // Eğer kullanıcı giriş yapmamışsa ve token yoksa "/" sayfasına yönlendir
-    if (!token || token === "/home") {
-        return NextResponse.redirect(new URL('/', request.url))
-    }
+    // if (!token || token === "/home") {
+    //     return NextResponse.redirect(new URL('/', request.url))
+    // }
 
 
 
-    if (pathname === "/homes") {
-        return NextResponse.redirect(new URL("/home", request.url))
-    }
+    // if (pathname === "/homes") {
+    //     return NextResponse.redirect(new URL("/home", request.url))
+    // }
 
 
     //diğer tüm durumarda normal devam et

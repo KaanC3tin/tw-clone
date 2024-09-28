@@ -8,11 +8,9 @@ interface StyleTopBarProps {
 const styleTopBar = ({ children }: StyleTopBarProps) => {
 
 
-
-
   return (
 
-    <div className='sticky top-0 font-twitterChirp  backdrop-blur-md bg-black/65 border-twitterBorder border-b z-10'>
+    <div className='fixed top-0 w-[598px] font-twitterChirp  backdrop-blur-sm bg-black/65 border-twitterBorder transition-colors  border-b z-20 '>
       {children}
     </div>
 

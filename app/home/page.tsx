@@ -25,21 +25,18 @@ const Page: React.FC = () => {
 
 
     return (
-        <div className='text-white'>
+        <div className='text-white min-h-screen h-full'>
             {loading ? (
                 <div>
                     <TwitterIconLoading />
                 </div>
             ) : (
-                <div className="text-white items-center flex h-screen">
-                    <div className=" bg-black flex flex-col mt-[-23px]  ">
-                        {/* <div className="flex flex-col items-center">
-                        </div> */}
+                <div className="text-white items-center flex min-h-screen overflow-y-auto">
+                    <div className=" bg-black flex flex-col mt-[-23px]">
                         <div className='flex flex-col justify-center ml-[208px] w-[275px] h-[933px] mt-2 hover:rounded-full transition-all ease-in-out duration-1000' >
                             <div className="leftSideFont fixed top-0 ">
                                 <Link href="/home">
                                     <div className='hover:bg-twitterIConHover rounded-full w-14 h-14 flex items-center justify-center duration-1000 '>
-                                        {/* ml-[-18px] xl:ml-[-18px] lg:ml-[-18px] md:ml-[-18px] sm:ml-[-18px] xs:ml-[-18px] 2xs:ml-[-18px] */}
                                         <Icon
                                             icon="prime:twitter"
                                             width={30}
@@ -86,13 +83,13 @@ const Page: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="w-[600px]  border-twitterBorder  border-x  h-screen !text-white">
+                    <div className="w-[600px]  border-twitterBorder  border-x  min-h-screen h-full !text-white">
                         <MiddleBar />
                     </div>
 
-                    <div className='sticky top-0   h-screen '>
+                          <div className='h-full'>
                         <RightBar />
-                    </div>
+                            </div>      
                 </div>
             )}
         </div>

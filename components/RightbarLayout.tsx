@@ -12,13 +12,13 @@ export interface RightbarLayoutProps<T> {
     user?: {
         name?: string;
         username?: string;
-        avatar: string ;
+        avatar: string;
     }
 }
 
 export default function RightbarLayout<T>({ title, more, children }: RightbarLayoutProps<T>) {
     return (
-        <div className='border border-twitterBorder  rounded-xl mt-[17px] '>
+        <div className='border border-twitterBorder  rounded-xl mt-[17px]'>
             <div >
                 <div className='my-[12px] font-extrabold text-[20px] text-white mx-3.5'>
                     {title}

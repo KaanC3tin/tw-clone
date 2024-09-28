@@ -1,6 +1,8 @@
 import React from 'react'
 import StyleTopBar from './StyleTopBar'
 import Tab from "@/components/Tab"
+import ForYou from './ForYou'
+import Following from './Following'
 
 const MiddleBar = () => {
   return (
@@ -16,16 +18,14 @@ const MiddleBar = () => {
             </Tab.Item>
           </Tab.Items>
         </StyleTopBar>
-
-
         <Tab.Content id="for-you">
-          1.content
+          <ForYou />
         </Tab.Content>
         <Tab.Content id="following">
-          2.content
+          <Following />
         </Tab.Content>
       </Tab>
-      
+
       <div className='mt-[53px]'></div>
     </>
   )

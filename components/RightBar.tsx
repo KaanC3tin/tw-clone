@@ -7,13 +7,17 @@ import Footer from './Footer'
 
 const RightBar = () => {
     return (
-        <div className=' mt-[5px] font-twitterChirp'>
-            <div className='ml-[32px]'>
+        <div className='flex mt-[5px] font-twitterChirp h-full'>
+            <div className='flex flex-col ml-[32px] absolute top-0'>
+
                 <Search />
-                <SubscribeRightBar />
-                <Trends />
-                <WhoFollowMe />
-                <Footer />
+                <div className='flex flex-col sticky bottom-0'>
+                    <SubscribeRightBar />
+                    <Trends />
+                    <WhoFollowMe />
+                    <Footer />
+                </div>
+
             </div>
         </div>
     )
