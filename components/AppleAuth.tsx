@@ -3,11 +3,11 @@ import React from 'react'
 
 
 
-const AppheAuth = () => {
+const AppleAuth = () => {
     const handleSignIn = async () => {
         const provider = new OAuthProvider("apple.com")
         const auth = getAuth();
-       
+
 
         try {
             const result = await signInWithPopup(auth, provider)
@@ -32,4 +32,4 @@ const AppheAuth = () => {
     )
 }
 
-export default AppheAuth
+export default AppleAuth

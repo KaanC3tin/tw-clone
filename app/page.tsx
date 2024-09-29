@@ -77,9 +77,9 @@ export default function Home() {
           <div>
             <GoogleAuth />
             <AppleAuth />
-            <div className="flex items-center  justify-between mt-3 my-2.5  px-1.5 mr-[54px] ">
-              <div className="flex-grow h-px bg-twitterBorder"></div>
-              <span className=" paddingL text-white font-normal text-[15px]">veya</span>
+            <div className="flex items-center  justify-between mt-3  my-2.5 ml-8 mr-[54px] ">
+              <div className="flex-grow h-px bg-twitterBorder "></div>
+              <span className=" paddingL  text-white font-normal text-[15px]">veya</span>
               <div className="flex-grow h-px bg-twitterBorder"></div>
             </div>
 
@@ -92,30 +92,30 @@ export default function Home() {
             <div className="text-[11px] font-normal font-twitterChirp mt-[9px]">
               <span>
                 <span className="text-[#71767b]">
-              By signing up, you agree to the
+                  By signing up, you agree to the
                 </span>
-              <span className="text-twitterBlue -ml-1.5">
-            Terms of Service
-              </span>
+                <span className="text-twitterBlue -ml-1.5">
+                  Terms of Service
+                </span>
                 <span className="text-[#71767b] -ml-1.5">
-                and
-            </span>
-              <span className=" text-twitterBlue -ml-2">
+                  and
+                </span>
+                <span className=" text-twitterBlue -ml-2">
                   Privacy
-              </span>
-                  <span className="text-twitterBlue flex">
+                </span>
+                <span className="text-twitterBlue flex">
                   Policy
-                <span className=" text-[#71767b] ml-0.5 ">
-                 ,including
-              </span>
-              <span className="text-twitterBlue -ml-2">
-              Cookie Use.
-              </span>
+                  <span className=" text-[#71767b] ml-0.5 ">
+                    ,including
                   </span>
-            </span>
-            <div className="mt-[50px] text-white text-[17px] font-twitterChirp">
-              Zaten bir hesabın var mı?
-           </div>
+                  <span className="text-twitterBlue -ml-2">
+                    Cookie Use.
+                  </span>
+                </span>
+              </span>
+              <div className="mt-[50px] text-white text-[17px] font-twitterChirp">
+                Zaten bir hesabın var mı?
+              </div>
             </div>
 
             <button

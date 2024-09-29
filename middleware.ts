@@ -8,8 +8,16 @@ export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname
 
 
-    // Eğer kullanıcı giriş yapmamışsa ve token yoksa "/" sayfasına yönlendir
-    if (!token || token === "/home") {
+
+
+    //eğer token varsa kullanıcı "/" sayfasındaysa ve token varsa direkt "/home" a yönlendirilir!
+    if ((pathname === "/") && token) {
+        return NextResponse.redirect(new URL("/home", request.url))
+    }
+
+
+    // Eğer kullanıcının token'ı yoksa giriş yapmaya çalışıyorsa "/" 'e yönlendir
+    if (!token && pathname === "/home") {
         return NextResponse.redirect(new URL('/', request.url))
     }
 
@@ -19,7 +27,7 @@ export function middleware(request: NextRequest) {
 
 
 
-// middleware'ın izleyeceği yolları belirle
+
 export const config = {
     matcher: ['/home'],
 }

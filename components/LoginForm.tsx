@@ -5,6 +5,7 @@ import GoogleAuth from './GoogleAuth';
 import Loading from './Loading';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
+import Cookies from 'js-cookie';
 
 export const waitUser = (time: number) => new Promise((resolve) => setTimeout(resolve, time));
 
@@ -33,10 +34,17 @@ const LoginForm: React.FC<LoginFormProps> = ({ onClose }) => {
 
     const handleLogin = async () => {
         const auth = getAuth();
+
         try {
-            await signInWithEmailAndPassword(auth, email, password);
+            const result = await signInWithEmailAndPassword(auth, email, password);
+            const user = result.user;
+            const token = await user.getIdToken()
+
+
+            Cookies.set("token", token, { expires: 4 })
             console.log("Giriş Yapıldı");
             router.push("/home")
+
 
         } catch (error) {
             console.log("Giriş Yapılmadı", error);
@@ -116,7 +124,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onClose }) => {
                             <button
                                 type="submit"
                                 disabled={!isEmailValid}
-                                className={`w-full bg-white text-gray-400 py-2 rounded-3xl flex justify-center items-center text-center transition duration-1000 mt-5 ${!isEmailValid ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                className={`w-full bg-white text-black py-2 rounded-3xl flex justify-center items-center text-center transition duration-1000 mt-5 ${!isEmailValid ? 'opacity-50 cursor-not-allowed' : ''}`}
                             >
                                 İleri
                             </button>

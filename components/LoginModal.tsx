@@ -32,7 +32,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
         <>
             <div className='w-full h-full absolute top-0 bg-twitterModal z-50' onClick={onClose}>
                 <div className="text-white flex items-center justify-center min-h-screen rounded-3xl font-twitterChirpExtendedHeavy text-sm" onClick={(e) => e.stopPropagation()}>
-                    <div className="bg-black w-full max-w-md p-24 rounded-2xl shadow-lg">
+                    <div className="bg-black  w-full max-w-md p-24 rounded-2xl shadow-lg">
                         <div className="relative container">
                             <div className="icon-top">
                                 <Icon icon="prime:twitter" width={30} height={30} />

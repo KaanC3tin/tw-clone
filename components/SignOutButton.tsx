@@ -40,7 +40,7 @@ const SignOutButton: React.FC = () => {
         Çıkış Yap
       </button>
       {signOutMessage && (
-        <div className=' '>
+        <div className='mx-4 font-semibold font-twitterChirp leading-none overflow-hidden'>
           {signOutMessage}
         </div>
       )}

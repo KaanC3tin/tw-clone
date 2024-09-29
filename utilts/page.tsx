@@ -194,7 +194,7 @@ export const posts = [
     {
         id: '1708810187170087412',
         type: 'photo',
-        content: [``],
+        content: [""],
         photo: [
             "https://pbs.twimg.com/media/GYjJy62WYAAMTHQ?format=jpg&name=small",
         ],
@@ -288,7 +288,7 @@ export const posts = [
     {
         id: '1708810187170087416',
         type: 'photo',
-        content: [`Gorgeous @Tesla Solar Roof install near Galveston Texas by Par:adigm Roofing – Every house should have this.`],
+        content: ["Gorgeous @Tesla Solar Roof install near Galveston Texas by Par:adigm Roofing – Every house should have this."],
         photo: [
             "https://pbs.twimg.com/media/GYhhAe8asAE8wsQ?format=jpg&name=small"
         ],

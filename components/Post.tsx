@@ -6,17 +6,19 @@ import Link from 'next/link';
 
 
 
-interface PostType<T> {
+interface PostType {
     post: {
+        date: string;
+        content: string | string[];
         account: {
             userName: string;
             fullName: string;
             avatar: string;
-            verified: boolean
-            bigger: boolean;
-            elonMusk: boolean;
+            verified?: boolean
+            bigger?: boolean;
+            elonMusk?: boolean;
         }
-        photo?: string;
+        photo?: string | string[];
     }
 
 }
@@ -47,36 +49,53 @@ const Post: React.FC<PostType> = ({ post }) => {
                     <div className='text-[15px] font-normal leading-5 ml-[7px] text-[#71767b] flex '>
                         @{post.account.userName}
                         <span className='mx-1'>
-                        ·
+                            ·
                         </span>
                         {post.date}
                     </div>
 
                 </div>
                 <div className='mb-[14px]'>
-                    {post.content && post.content.map((line, index) => (
-                        <div key={index}>{line}</div>
-
-                    ))}
+                    {Array.isArray(post.content) ? (
+                        post.content.map((line, index) => (
+                            <div key={index}>{line}</div>
+                        ))
+                    ) : (<>
+                    </>)}
                 </div>
                 <div>
-                    {post.photo && (
+                    {Array.isArray(post.photo) ? (
+                        post.photo.map((photoUrl, index) => (
+                            <div key={index}>
+                                <img src={photoUrl} alt={`Photo${index}`} />
+                            </div>
+                        ))
+                    ) : (<>Not Photo</>)
+
+                    }
+
+
+
+
+
+                    {/* {post.photo && (
                         <img
                             src={post.photo}
                             width={518} height={386}
                             alt='photo' className=' object-cover rounded-2xl '
                         />
-                    )}
+                    )} */}
+
+
+
+                    {/* {post.content && post.content.map((line, index) => (
+                        <div key={index}>{line}</div>
+
+                    ))} */}
                 </div>
-
-
-
-                {/* <div className='flex items-center'>
-                </div> */}
             </div>
             <div>
             </div>
-            {/* <span className='mt-[4px] mb-[14px] g'>Hop in, we`re going to Mars!</span> */}
         </div>
     )
 }

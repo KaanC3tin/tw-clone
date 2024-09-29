@@ -35,7 +35,7 @@ const Account: React.FC<AccountProps> = ({ avatar, name, username }) => {
                         </div>
                         <div className='flex'>
                             <div className='text-[#71767b] text-[15px] mx-3 '>
-                                {account?.username}
+                                {account?.userName}
                             </div>
                         </div>
                     </div>
