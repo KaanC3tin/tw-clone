@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 interface Account {
     id: number;
     name: string;
-    username: string;
+    userName: string;
     avatar: string;
 }
 
@@ -18,7 +18,7 @@ export const initialState: AccountState = {
     currentAccount: {
         id: 1,
         name: "kaan",
-        username: "n0d0dg3",
+        userName: "n0d0dg3",
         avatar: "https://pbs.twimg.com/profile_images/1748018830683566081/bubgNnQq_400x400.jpg",
     },
     accounts: [
