@@ -191,44 +191,6 @@ export const trends = [
 ]
 
 export const posts = [
-    // {
-    //     id: '1708810187170087411',
-    //     type: 'poll',
-    //     content: `Kahvaltıda en çok hangi seçeneği tercih edersiniz?
-    //     Bu anket sabah kahvaltısı sırasında sorulmuştur.`,
-    //     poll: {
-    //         voted: false,
-    //         votes: 15,
-    //         answers: [
-    //             {
-    //                 id: 1,
-    //                 text: 'Simit',
-    //                 votes: 6
-    //             },
-    //             {
-    //                 id: 2,
-    //                 text: 'Poğaça',
-    //                 votes: 4
-    //             },
-    //             {
-    //                 id: 3,
-    //                 text: 'Yumurta',
-    //                 votes: 5
-    //             }
-    //         ]
-    //     },
-    //     account: {
-    //         avatar: 'https://pbs.twimg.com/profile_images/1200814302820753410/AhAh3xlU_400x400.png',
-    //         userName: 'kahvaltici',
-    //         fullName: 'Kahvaltı Dostları'
-    //     },
-    //     stats: {
-    //         comments: 100,
-    //         repost: 20,
-    //         like: 500,
-    //         view: 1500
-    //     }
-    // },
     {
         id: '1708810187170087412',
         type: 'photo',
@@ -236,11 +198,13 @@ export const posts = [
         photo: [
             "https://pbs.twimg.com/media/GYjJy62WYAAMTHQ?format=jpg&name=small",
         ],
+        date: "2h",
         account: {
             avatar: "https://pbs.twimg.com/profile_images/1815749056821346304/jS8I28PL_400x400.jpg",
             userName: 'elonmusk',
             fullName: 'Elon Musk',
-            verified: true
+            verified: true,
+            elonMusk: true,
         },
         stats: {
             comments: 50,
@@ -259,10 +223,13 @@ export const posts = [
         photo: [
             'https://pbs.twimg.com/media/GYff4bjWkAEZsyB?format=jpg&name=small',
         ],
+        date: "sep 28",
         account: {
             avatar: 'https://pbs.twimg.com/profile_images/1776865800307060736/rhxxKVRw_normal.jpg',
             userName: 'firearmsdaily_',
-            fullName: 'Firearms & Patriotism'
+            fullName: 'Firearms & Patriotism',
+            verified: true,
+
         },
         stats: {
             comments: 200,
@@ -277,6 +244,7 @@ export const posts = [
         photo: [
             "https://pbs.twimg.com/media/GYcvYJ9aQAAjsZS?format=jpg&name=small",
         ],
+        date: "10m",
         account: {
             avatar: "	https://pbs.twimg.com/profile_images/1828145724963561472/CzV0LTLP_normal.png",
             userName: 'PunchingCat',
@@ -293,16 +261,22 @@ export const posts = [
     {
         id: '1708810187170087415',
         type: 'photo',
-        content: [`Büyükşehirdeki yaşam temposu! 🏙️`],
-        photo: [
-            'https://pbs.twimg.com/media/F7XXKj9WgAA6Cw4?format=jpg&name=900x900',
-            'https://pbs.twimg.com/media/F7XXKj9WgAA6Cw5?format=jpg&name=900x900'
-        ],
-        account: {
-            avatar: 'https://pbs.twimg.com/profile_images/1707827931895017472/1-bUbTT3_400x400.jpg',
-            userName: 'sehir_hayati',
-            fullName: 'Şehir Hayatı'
+        content: [
+            "RIP DUMBLEDOOR September 27, 2023",
+            "RIP MCGONAGALL September 27, 2024",
 
+            "Exactly 1 year apart."
+        ],
+        photo: [
+            'https://pbs.twimg.com/media/GYfRkdPWYAAHJMo?format=jpg&name=small',
+        ],
+        date: "21m",
+        account: {
+            avatar: "https://pbs.twimg.com/profile_images/1835715530507882496/o2Yf6v3l_normal.jpg",
+            userName: 'JDaIey',
+            fullName: 'Jordan Daley',
+            verified: true,
+            bigger: true,
         },
         stats: {
             comments: 150,
@@ -314,19 +288,16 @@ export const posts = [
     {
         id: '1708810187170087416',
         type: 'photo',
-        content: [`Gorgeous @Tesla Solar Roof install near Galveston Texas by Paradigm Roofing – Every house should have this.`],
+        content: [`Gorgeous @Tesla Solar Roof install near Galveston Texas by Par:adigm Roofing – Every house should have this.`],
         photo: [
-            "https://pbs.twimg.com/media/GYhhAe8asAE8wsQ?format=jpg&name=small",
-            // 'https://pbs.twimg.com/media/F7XXKj9WgAA6Cw7?format=jpg&name=large',
+            "https://pbs.twimg.com/media/GYhhAe8asAE8wsQ?format=jpg&name=small"
         ],
+        date: "1h",
         account: {
             avatar: "https://pbs.twimg.com/profile_images/1515410865499119620/s1ws6CFZ_400x400.jpg",
             userName: 'ajtourville',
             fullName: 'ALEX',
-            verified: true,
-            // name: "kaan",
-            // userName: "n0d0dg3",
-            // avatar: "https://pbs.twimg.com/profile_images/1748018830683566081/bubgNnQq_400x400.jpg",
+            verified: true
         },
         stats: {
             comments: 250,

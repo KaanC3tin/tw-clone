@@ -49,7 +49,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                             ) : (
                                 <>
                                     <div>
-                                        <span className='text-2xl flex items-center justify-center'>X'e Giriş yap</span>
+                                        <span className='text-2xl flex items-center justify-center'>X`e Giriş yap</span>
                                     </div>
                                     <LoginForm onClose={onClose} />
                                 </>

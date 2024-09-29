@@ -81,7 +81,7 @@ const Page: React.FC = () => {
                                     <Post />
                                 </div>
                                 <div className="mt-[30px]">
-                                    <Account />
+                                    <Account avatar="avatar" username="n0d0dg3" name="kaan" />
                                 </div>
                             </div>
                         </div>

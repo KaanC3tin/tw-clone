@@ -1,9 +1,9 @@
 {
-  "name": "twitter-clone",
+  "name": "twitter-clone-yapan-geri-enayi-benim",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -H  kaancetin.com -p 80",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

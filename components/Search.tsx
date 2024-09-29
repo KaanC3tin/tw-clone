@@ -25,7 +25,7 @@ const Search: React.FC<SearchProps> = () => {
     <div className='fixed top-0 pt-[6px] bg-black  z-50'>
       <Popover>
         <PopoverButton
-          as="div"
+          as="label"
           onClick={handleButtonClick}
           className='h-[48px] w-[350px] bg-[#202327]  px-5 flex items-center border border-transparent rounded-full  focus-within:border-[#1d9bf0] focus-within:bg-black  z-30'
 
