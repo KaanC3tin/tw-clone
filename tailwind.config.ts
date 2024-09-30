@@ -12,7 +12,7 @@ const config: Config = {
         "150vh": "150vh",
         "200vh": "200vh",
         "250vh": "250vh",
-        "300vh":"300vh"
+        "300vh": "300vh"
       },
       boxShadow: {
         box: 'rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px'
@@ -42,10 +42,10 @@ const config: Config = {
       },
 
       fontWeight: {
-        'twitter-heavy': 800,
-        'twitter-bold': 700,
-        'twitter-medium': 500,
-        'twitter-regular': 400,
+        'twitter-heavy': "800",
+        'twitter-bold': "700",
+        'twitter-medium': "500",
+        'twitter-regular': "400",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -10,7 +10,7 @@ const RightBar = () => {
         <div className='flex mt-[5px] font-twitterChirp h-full'>
             <div className='flex flex-col ml-[32px] absolute top-0'>
 
-                <Search />
+                <Search focus={focus}/>
                 <div className='flex flex-col sticky bottom-0'>
                     <SubscribeRightBar />
                     <Trends />

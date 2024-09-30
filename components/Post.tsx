@@ -70,28 +70,8 @@ const Post: React.FC<PostType> = ({ post }) => {
                                 <img src={photoUrl} alt={`Photo${index}`} />
                             </div>
                         ))
-                    ) : (<>Not Photo</>)
-
+                    ) : (<>Not Photo!</>)
                     }
-
-
-
-
-
-                    {/* {post.photo && (
-                        <img
-                            src={post.photo}
-                            width={518} height={386}
-                            alt='photo' className=' object-cover rounded-2xl '
-                        />
-                    )} */}
-
-
-
-                    {/* {post.content && post.content.map((line, index) => (
-                        <div key={index}>{line}</div>
-
-                    ))} */}
                 </div>
             </div>
             <div>

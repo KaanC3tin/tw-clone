@@ -51,15 +51,12 @@ const Search: React.FC<SearchProps> = () => {
                 >
                   <svg fill='#000000' height={21.99} width={21.99} viewBox="0 0 15 15" aria-hidden="true"
                     className="bg-[#1d9bf0] px-[5.5px]  rounded-full r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-cqee49 r-1or9b2r r-5soawk"><g><path d="M6.09 7.5L.04 1.46 1.46.04 7.5 6.09 13.54.04l1.42 1.42L8.91 7.5l6.05 6.04-1.42 1.42L7.5 8.91l-6.04 6.05-1.42-1.42L6.09 7.5z"></path></g></svg>
-                  {/* &times; */}
-
                 </Button>
               )}
             </div>
 
 
           </label>
-          {/* </div> */}
         </PopoverButton>
         <PopoverPanel className="bg-black shadow-box flex justify-center pt-[20px] h-[105px] bottom-0 rounded-xl z-10 text-[#71767B] font-normal text-[15px]">
           <span>Try searching for people,lists, or keybords</span>
