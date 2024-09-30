@@ -67,7 +67,7 @@ const Post: React.FC<PostType> = ({ post }) => {
                     {Array.isArray(post.photo) ? (
                         post.photo.map((photoUrl, index) => (
                             <div key={index}>
-                                <img src={photoUrl} alt={`Photo${index}`} />
+                                <img className="rounded-2xl" src={photoUrl} alt={`Photo${index}`} />
                             </div>
                         ))
                     ) : (<>Not Photo!</>)
