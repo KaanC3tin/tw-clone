@@ -40,3 +40,5 @@ next-env.d.ts
 /.vscode-root
 
 
+#firebase
+/lib/fiebaseConfig.ts
