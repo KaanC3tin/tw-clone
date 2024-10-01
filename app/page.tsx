@@ -77,7 +77,7 @@ export default function Home() {
           <div>
             <GoogleAuth />
             <AppleAuth />
-            <div className="flex items-center  justify-between mt-3  my-2.5 ml-8 mr-[54px] ">
+            <div className="flex items-center  justify-between mt-3  my-2.5 px-4 ml-10 2xl:mr-[60px] ">
               <div className="flex-grow h-px bg-twitterBorder "></div>
               <span className=" paddingL  text-white font-normal text-[15px]">veya</span>
               <div className="flex-grow h-px bg-twitterBorder"></div>
