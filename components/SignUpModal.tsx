@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Icon } from "@iconify-icon/react";
 import { auth } from "@/lib/firebaseConfig";
-import { createUserWithEmailAndPassword, getAuth, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Loading from './Loading';
 import { useRouter } from 'next/navigation';
-
 
 interface SigninModalProps {
     isOpen: boolean;
@@ -12,23 +11,22 @@ interface SigninModalProps {
 }
 
 const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
-
     const [loading, setLoading] = useState<boolean>(false);
-    const [isim, setIsim] = useState('')
+    const [isim, setIsim] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [day, setDay] = useState('')
-    const [mounth, setMounth] = useState('')
-    const [year, setYear] = useState('')
+    const [day, setDay] = useState('');
+    const [month, setMonth] = useState('');
+    const [year, setYear] = useState('');
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const [showIsim, setShowIsim] = useState<boolean>(true);
     const [showEmail, setShowEmail] = useState<boolean>(true);
     const [showHistory, setShowHistory] = useState<boolean>(true);
     const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);
-    const [isFormValid, setIsFormValid] = useState<boolean>(false)
+    const [isFormValid, setIsFormValid] = useState<boolean>(false);
+    const [isPasswordValid, setIsPasswordValid] = useState<boolean>(false);
 
     const router = useRouter();
-
 
     const currentYear = new Date().getFullYear();
     const years = Array.from({ length: 120 }, (_, i) => currentYear - i);
@@ -40,10 +38,9 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
 
     useEffect(() => {
         if (isOpen) {
-            // Modal açıldığında tüm alanları göster ve form verilerini sıfırla
             setPassword('');
             setEmail('');
-            setIsim('')
+            setIsim('');
             setShowPassword(false);
             setShowIsim(true);
             setShowEmail(true);
@@ -52,22 +49,14 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
         }
     }, [isOpen]);
 
-
-
     useEffect(() => {
-        // Form geçerliliğini kontrol et
-        if (showPassword) {
-            setIsFormValid(!!(isim && email && password && day && mounth && year));
-        } else {
-            setIsFormValid(!!(isim && email && day && mounth && year));
-        }
-    }, [isim, email, password, day, mounth, year, showPassword]);
-
-    1
+        setIsFormValid(!!(isim && email && day && month && year && (!showPassword || isPasswordValid)));
+    }, [isim, email, password, day, month, year, showPassword, isPasswordValid]);
 
 
     const handleSignUp = async (e: React.FormEvent) => {
         e.preventDefault();
+
         setLoading(true);
         try {
             await createUserWithEmailAndPassword(auth, email, password);
@@ -78,28 +67,24 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
                 onClose();
             }, 1500);
         } catch (error) {
-            console.log("Kaydı tamamlamak için şifre oluşturun!", error);
-            router.push("/home")
+            console.error("Kaydı tamamlamak için bir hata oluştu!", error);
             setLoading(false);
-            // Başarısızlık durumunda sadece şifre alanını göster
             setShowIsim(false);
             setShowEmail(false);
             setShowHistory(false);
             setShowPassword(true);
         }
-    }
-
-     
+    };
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
-    }
+    };
 
     const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setPassword(e.target.value);
-    }
-
-
+        const newPassword = e.target.value;
+        setPassword(newPassword);
+        setIsPasswordValid(newPassword.length >= 8);
+    };
 
     if (!isOpen) return null;
 
@@ -138,7 +123,6 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
                                             className="w-64 bg-black text-white rounded-md p-2 focus:outline-none focus:ring-1 focus:border-blue-500 transition ease-in-out duration-150"
                                             onChange={(e) => setIsim(e.target.value)}
                                             value={isim}
-
                                         />
                                     </div>
                                 )}
@@ -162,12 +146,11 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
                                                 required
                                                 name="month"
                                                 className="bg-black text-white border border-twitterGray focus:border-blue-500 rounded-md p-2"
-                                                onChange={(e) => setMounth(e.target.value)}
+                                                onChange={(e) => setMonth(e.target.value)}
                                             >
                                                 <option value="">Ay</option>
                                                 {months.map((month) => (
-                                                    <option key={month}
-                                                        value={month}>{month}</option>
+                                                    <option key={month} value={month}>{month}</option>
                                                 ))}
                                             </select>
                                             <select
@@ -175,12 +158,10 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
                                                 name="day"
                                                 className="bg-black text-white border border-twitterGray focus:border-blue-500 rounded-md p-2"
                                                 onChange={(e) => setDay(e.target.value)}
-
                                             >
                                                 <option value="">Gün</option>
                                                 {days.map((day) => (
-                                                    <option key={day}
-                                                        value={day}>{day}</option>
+                                                    <option key={day} value={day}>{day}</option>
                                                 ))}
                                             </select>
                                             <select
@@ -188,12 +169,10 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
                                                 name="year"
                                                 className="bg-black text-white border border-twitterGray focus:border-blue-500 rounded-md p-2"
                                                 onChange={(e) => setYear(e.target.value)}
-
                                             >
                                                 <option value="">Yıl</option>
                                                 {years.map((year) => (
-                                                    <option key={year}
-                                                        value={year}>{year}</option>
+                                                    <option key={year} value={year}>{year}</option>
                                                 ))}
                                             </select>
                                         </div>
@@ -212,12 +191,9 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
                                     </div>
                                 )}
                                 <button
-                                    //    onClick={}
                                     type="submit"
                                     disabled={!isFormValid}
-                                    className={`w-full py-2 rounded-3xl flex justify-center items-center text-center transition duration-1000 ${isFormValid ? 'bg-white text-black' : 'bg-gray-400 text-gray-600 opacity-50 cursor-not-allowed'
-                                        }`}
-                                // className="w-full bg-white text-black py-2 rounded-3xl flex justify-center items-center text-center transition duration-1000"
+                                    className={`w-full py-2 rounded-3xl flex justify-center items-center text-center transition duration-1000 ${isFormValid ? 'bg-white text-black' : 'bg-gray-400 text-gray-600 opacity-50 cursor-not-allowed'}`}
                                 >
                                     Kayıt ol
                                 </button>
@@ -231,6 +207,3 @@ const SigninModal: React.FC<SigninModalProps> = ({ isOpen, onClose }) => {
 }
 
 export default SigninModal;
-
-
-
