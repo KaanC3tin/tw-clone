@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const SubscribeRightBar = () => {
@@ -11,9 +12,11 @@ const SubscribeRightBar = () => {
                     Subscribe to unlock new features and if eligible, receive a share of ads revenue.
                 </p>
                 <div className='-ml-4'>
+                    <Link href="/home">
                     <button className='w-[106px] h-[36px] m-[12px] bg-[#1d9bf0] text-white font-bold text-[15px] rounded-full '>
                         Subscribe
                     </button>
+                    </Link>
                 </div>
             </div>
 
