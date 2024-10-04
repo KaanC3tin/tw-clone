@@ -30,9 +30,9 @@ export default function RightbarLayout<T>({ title, more, children }: RightbarLay
                     href={more}
                     className='h-[52px] flex items-center  text-twitterBlue hover:bg-zinc-950 text-[15px] hover:rounded-xl overflow-hidden'
                 >
-                    <div className='mx-3.5'>
+                    <Link href="/trend" className='mx-3.5'>
                         Show more
-                    </div>
+                    </Link>
                 </Link>
             )}
         </div>
